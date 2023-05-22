@@ -1,0 +1,472 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Ubuntu:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Ubuntu+Mono:wght@700&family=Ubuntu:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600&family=Lobster&family=Ubuntu+Mono:wght@700&family=Ubuntu:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600&family=Courgette&family=Lobster&family=Ubuntu+Mono:wght@700&family=Ubuntu:ital@1&display=swap');
+
+:root {
+
+    --cor1: #E2E2E2;
+    --cor2: #B2B2B2;
+    --cor3: #9A9A9A;
+    --cor4: #818181;
+    --cor5: #515151;
+    --corTx: #444333;
+    --corLk: #444edf;
+    --corTp: #c23636;
+
+    /* --cor1: #B1FDAB;
+    --cor2: #95E18F;
+    --cor3: #5CA858;
+    --cor4: #3F8C3C;
+    --cor5: #065304;
+    --corTx: #444333;
+    --corLk: #db1818;
+    --corTp: #3662c2; */
+    
+    /* --cor1: #CBCFD1;
+    --cor2: #B0B6BA;
+    --cor3: #FFD639;
+    --cor4: #6A736F;
+    --cor5: #313B2F;
+    --corTx: #000000;
+    --corLk: #181bdb;
+    --corTp: #faed3a; */
+
+    /* --cor1: #f7e3a2;
+    --cor2: #fcbc3d;
+    --cor3: #f78a06;
+    --cor4: #d45907;
+    --cor5: #9e330c;
+    --corTx: #454545;
+    --corLk: #df4444;
+    --corTp: #4a6bd9; */
+
+
+    /* --cor1: #F3FEB0;
+    --cor2: #A5AAA3;
+    --cor3: #FEA443;
+    --cor4: #705E78;
+    --cor5: #812F33;
+    --corTx: #000000;
+    --corLk: #181bdb;
+    --corTp: #faed3a; */
+
+    /* --cor1: #FFAAAA;
+    --cor2: #E38E8E;
+    --cor3: #AA5555;
+    --cor4: #8E3939;
+    --cor5: #550000;
+    --corTx: #6e1a1a;
+    --corLk: #181bdb;
+    --corTp: #faed3a; */
+
+    /* --cor1: #9EEEFA;
+    --cor2: #85D6E2;
+    --cor3: #52A6B1;
+    --cor4: #398D98;
+    --cor5: #065D67;
+    --corTx: #064067;
+    --corLk: #181bdb;
+    --corTp: #dd5e09; */
+
+    /* --cor1: #9F9FF3;
+    --cor2: #8686DC;
+    --cor3: #5353AD;
+    --cor4: #393995;
+    --cor5: #060666;
+    --corTx: #080667;
+    --corLk: #414283;
+    --corTp: #973333; */
+
+    /* --cor1: #060666;
+    --cor2: #393995;
+    --cor3: #5353AD;
+    --cor4: #5353AD;
+    --cor5: #9F9FF3;
+    --corTx: #c1c1f0;
+    --corLk: #e1ee95;
+    --corTp: #f77f7f; */
+
+    /* --cor1: #DFD1ED;
+    --cor2: #CCB9DB;
+    --cor3: #A58AB8;
+    --cor4: #7E5B94;
+    --cor5: #6A4382;
+    --corTx: #6565a3;
+    --corLk: #6a7915;
+    --corTp: #b11313; */
+
+    --imgTop: url("./images/encode/logo_cubo_amarelo_01.png");
+    --box1: rgba(195, 195, 195, 0.2);
+    --box2: rgba(255, 255, 255, 0.3);
+
+    /* ------------------- FONTES E TAMANHOS --------------------------- */
+    --fnttam: 12px/1.5;
+    --fntpad: 'Chakra Petch', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font: var(--fnttam) var(--fntpad);
+    background-color: var(--cor1);
+    color: var(--corTx);
+    margin: auto;
+}
+
+header {
+    position: relative;
+    margin: 5px auto;
+    padding: 15px;
+    width: 90%;
+    background-color: var(--cor3);
+    border-radius: 1px 1px 15px 15px;
+}
+
+.imgdef {
+    width: 100%;
+    height: 100%;
+}
+
+.imglog {
+    width: 150px;
+    height: 150px;
+}
+
+.hdr-overlay {
+    position: relative;
+    top: 1px;
+    left: 1px;
+}
+
+.header .box {
+    position: absolute;
+    top: 6px;
+    width: 75px;
+    height: 10px;
+}
+
+.hdr-box0 {
+    right: 15px;
+    background: var(--cor5);
+}
+
+.hdr-box1 {
+    right: 100px;
+    background: var(--cor4);
+}
+
+.hdr-box2 {
+    right: 185px;
+    background: var(--cor2);
+}
+
+.hdr-box3 {
+    right: 270px;
+    background: var(--cor1);
+}
+
+.hdr-box4 {
+    right: 355px;
+    background: var(--cor3);
+}
+
+.hdr-box5 {
+    right: 1px;
+    background: var(--box1);
+}
+
+.header .hdr-box5 {
+    position: absolute;
+    top: 18px;
+    width: 100%;
+    height: 145px;
+}
+
+.mnulnk {
+    background-color: var(--cor5);
+    color: var(--cor1);
+    text-decoration: none;
+    margin: 0 20px 0 0;
+    padding: 10px 50px;
+    border-radius: 5px;
+    /* box-shadow: 3px 3px 5px rgba(255, 255, 255, 0.5); */
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+}
+
+.mnulnk:hover {
+    background-color: var(--cor1);
+    color: var(--cor5);
+    border-radius: 5px;
+    /* box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5); */
+    box-shadow: 3px 3px 5px rgba(255, 255, 255, 0.5);
+}
+
+h1 {
+    font-family: var(--fntpad);
+    color: var(--cor5);
+    font-size: 5em;
+}
+
+h2 {
+    font-family: var(--fntpad);
+    color: var(--cor5);
+    font-size: 2em;
+}
+
+.emptit {
+    position: absolute;
+    top: 30px;
+    left: 250px;
+    margin: 0;
+    width: 8em;
+    line-height: 1.5em;
+}
+
+.emptxt {
+    position: absolute;
+    margin: 0;
+    top: 97px;
+    left: 254px;
+    width: 15em;
+    line-height: 1.5em;
+
+}
+
+nav {
+    height: 12px;
+    padding: 15px;
+}
+
+
+/*************************************************************************/
+/* Em telas com largura menor que 1200px */
+@media screen and (max-width: 1200px) {
+
+    h1 {
+        font-size: 4em;
+    }
+
+    h2 {
+        font-size: 1.6em;
+    }
+
+    .emptit {
+        top: 35px;
+        left: 200px;
+        width: 6.2em;
+    }
+
+    .emptxt {
+        top: 88px;
+        left: 203px;
+        width: 15em;
+    }
+
+    .imgdef {
+        width: 100%;
+        height: 100%;
+    }
+
+    .imglog {
+        width: 120px;
+        height: 120px;
+    }
+
+    .mnulnk {
+        margin: 0 15px 0 0;
+        padding: 5px 20px;
+    }
+
+    .header .box {
+        position: absolute;
+        top: 6px;
+        width: 35px;
+        height: 10px;
+    }
+
+    .hdr-box0 {
+        right: 10px;
+    }
+
+    .hdr-box1 {
+        right: 55px;
+    }
+
+    .hdr-box2 {
+        right: 100px;
+    }
+
+    .hdr-box3 {
+        right: 145px;
+    }
+
+    .hdr-box4 {
+        right: 200px;
+    }
+
+    .hdr-box5 {
+        right: 1px;
+        background: var(--box1);
+    }
+
+    .header .hdr-box5 {
+        position: absolute;
+        top: 18px;
+        width: 100%;
+        height: 115px;
+    }
+
+}
+
+/* Em telas com largura de 600px ou menos */
+
+@media screen and (max-width: 730px) {
+
+    h1 {
+        font-size: 3em;
+    }
+
+    h2 {
+        font-size: 1.2em;
+    }
+
+    .emptit {
+        top: 20px;
+        left: 120px;
+        width: 6.2em;
+    }
+
+    .emptxt {
+        top: 61px;
+        left: 122.5px;
+        width: 15em;
+    }
+
+    .imgdef {
+        width: 100%;
+        height: 100%;
+    }
+
+    .imglog {
+        width: 80px;
+        height: 80px;
+    }
+
+    .mnulnk {
+        margin: 0 10px 0 0;
+        padding: 2px 10px;
+    }
+
+    .header .box {
+        position: absolute;
+        top: 6px;
+        width: 25px;
+        height: 9px;
+    }
+
+    .hdr-box0 {
+        right: 5px;
+    }
+
+    .hdr-box1 {
+        right: 35px;
+    }
+
+    .hdr-box2 {
+        right: 70px;
+    }
+
+    .hdr-box3 {
+        right: 105px;
+    }
+
+    .hdr-box4 {
+        right: 140px;
+    }
+
+    .hdr-box5 {
+        right: 1px;
+        background: var(--box1);
+    }
+
+    .header .hdr-box5 {
+        position: absolute;
+        top: 17px;
+        width: 100%;
+        height: 77px;
+    }
+
+}
+
+
+/*************************************************************************/
+
+main {
+    background-color: var(--cor4);
+    border-radius: 15px 15px 15px 15px;
+    position: relative;
+    margin: 5px auto;
+    padding: 15px;
+    width: 90%;
+}
+
+section {
+    background-color: var(--cor2);
+    border-radius: 15px 1px 15px 1px;
+    padding: 10px;
+    margin: 10px;
+}
+
+h3 {
+    font-family: var(--fntpad);
+    font-size: 1.5em;
+}
+
+.lnkmas {
+    margin: 10px;
+    text-align: right;
+}
+
+.lnkdef {
+    color: var(--corLk);
+    width: 30px;
+    height: 5px;
+}
+
+.lnkdef:hover {
+    color: var(--corTp);
+}
+
+.destaq {
+    right: 1px;
+    padding: 5px;
+    border-radius: 10px 0 10px 0;
+    background: var(--box2);
+    text-decoration-line: underline;
+}
+
+.negrit {
+    color: var(--corTp);
+    font-weight: bolder;
+    text-decoration-line: underline;
+}
+
+footer {
+    background-color: var(--cor5);
+    border-radius: 15px 15px 1px 1px;
+    color: var(--cor1);
+    position: relative;
+    margin: 5px auto;
+    padding: 15px;
+    width: 90%;
+}
+
+.alinrd {
+    text-align: center;
+}
