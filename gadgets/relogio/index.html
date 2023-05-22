@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="../../assets/x_images/encode/icon_lt_vrm_48x48.ico" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <title>Relógio Digital</title>
+
+    <!-- https://www.youtube.com/watch?v=eoSfzVz9ur0&ab_channel=OnlineTutorials -->
+    <!-- https://www.youtube.com/watch?v=yXFiTDfhSXo&ab_channel=OnlineTutorials -->
+    <!-- https://www.youtube.com/watch?v=uv20S1lduU4&ab_channel=OnlineTutorials -->
+
+</head>
+
+<body>
+
+    <div id="time">
+
+        <div class="circle" style="--clr:#ff2929;">
+            <div class="dots hrs_dot"></div>
+            <svg>
+                <circle cx="70" cy="70" r="70"></circle>
+                <circle cx="70" cy="70" r="70" id="hrs"></circle>
+            </svg>
+            <div id="hours">00</div>
+        </div>
+
+        <div class="circle" style="--clr:#fee800;">
+            <div class="dots min_dot"></div>
+            <svg>
+                <circle cx="70" cy="70" r="70"></circle>
+                <circle cx="70" cy="70" r="70" id="min"></circle>
+            </svg>
+            <div id="minutes">00</div>
+        </div>
+
+        <div class="circle" style="--clr:#04fc43;">
+            <div class="dots sec_dot"></div>
+            <svg>
+                <circle cx="70" cy="70" r="70"></circle>
+                <circle cx="70" cy="70" r="70" id="sec"></circle>
+            </svg>
+            <div id="seconds">00</div>
+        </div>
+
+        <div class="ap">
+            <div id="ampm">AM</div>
+        </div>
+
+    </div>
+
+    <script>
+
+        setInterval(() => {
+
+            let oHrs = document.getElementById('hours');
+            let oMin = document.getElementById('minutes');
+            let oSec = document.getElementById('seconds');
+            let oAmP = document.getElementById('ampm');
+
+            let oHhh = document.getElementById('hrs');
+            let oMmm = document.getElementById('min');
+            let oSss = document.getElementById('sec');
+
+            let oDtH = document.querySelector('.hrs_dot');
+            let oDtM = document.querySelector('.min_dot');
+            let oDtS = document.querySelector('.sec_dot');
+
+            let nHrs = new Date().getHours();
+            let nMin = new Date().getMinutes();
+            let nSec = new Date().getSeconds();
+            let cAmP = (nHrs >= 12) ? "PM" : "AM";
+
+            // CONVERTER 24hrs para 12hrs
+            if (nHrs > 12) {
+                nHrs = nHrs - 12;
+            }
+
+            // ADICIONAR ZERO PARA UM DIGITO
+            nHrs = (nHrs < 10) ? "0" + nHrs : nHrs;
+            nMin = (nMin < 10) ? "0" + nMin : nMin;
+            nSec = (nSec < 10) ? "0" + nSec : nSec;
+
+            oHrs.innerHTML = nHrs + "<br><span>Horas</span>";
+            oMin.innerHTML = nMin + "<br><span>Minutos</span>";
+            oSec.innerHTML = nSec + "<br><span>Secundos</span>";
+            oAmP.innerHTML = cAmP;
+
+            // 12 HORAS
+            oHhh.style.strokeDashoffset = 440 - (440 * nHrs) / 12;
+            // 60 MINUTOS
+            oMmm.style.strokeDashoffset = 440 - (440 * nMin) / 60;
+            //60 SECUNDOS
+            oSss.style.strokeDashoffset = 440 - (440 * nSec) / 60;
+
+            oDtH.style.transform = `rotate(${nHrs * 30}deg)`;
+            oDtM.style.transform = `rotate(${nMin * 6}deg)`;
+            oDtS.style.transform = `rotate(${nSec * 6}deg)`;
+
+        })
+
+    </script>
+
+</body>
+
+</html>
