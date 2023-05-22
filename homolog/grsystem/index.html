@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="shortcut icon" href="./assets/x_images/logos/logo_gr_100x100.gif" type="image/x-icon">
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+        integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>GR System</title>
+
+</head>
+
+<body>
+    <!-- ====================[ HEADER ]==================== -->
+    <header style="background-image: url('./assets/x_images/grande/back_home.jpg');">
+        <div class="container">
+            <nav>
+                <a href="index.html">
+                    <img src="./assets/x_images/logos/logo_gr_300x150.png" alt="Logo">
+                </a>
+                <ul class="ul">
+                    <a href="index.html">HOME</a>
+                    <a href="empre.html">EMPRESA</a>
+                    <a href="servs.html">SERVIÇOS</a>
+                    <a class="btn" href="conta.html">CONTATO</a>
+                    <div class="close-icon" onclick="closeMenu()">
+                        <i class="fa fa-times-circle" aria-hidden="true"></i>
+                    </div>
+                </ul>
+                <div class="menu-icon" onclick="openMenu()">
+                    <i class="fa fa-bars"></i>
+                </div>
+            </nav>
+            <section class="banner">
+                <div class="banner-text">
+                    <h1>GR System</h1>
+                    <p>Lorem ipsum dolor amet consectetur adipisicing, Quo cupiditate voluptas eos vitae.</p>
+                    <a href="conta.html" class="btn animate-outline">Fale Conosco</a>
+                </div>
+            </section>
+        </div>
+
+    </header>
+
+    <section class="faca-mais">
+        <div class="container">
+            <div class="faca-mais-text">
+                <h3>Faça mais com GR System</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, reprehenderit! Iste, a aliquam.
+                    temporibus voluptatum facere officiis tempora.</p>
+                <a class="btn animate-outline" href="conta.html">Fale Conosco</a>
+            </div>
+            <div class="faca-mais-img">
+                <img class="img-faca-mais" src="./assets/x_images/medio/img-1.png" alt="">
+            </div>
+        </div>
+    </section>
+
+    <section class="faca-mais">
+        <div class="container">
+            <div class="faca-mais-img">
+                <img class="img-faca-mais" src="./assets/x_images/medio/img-2.png" alt="">
+            </div>
+            <div class="faca-mais-text">
+                <h3>Ter um sistema nunca foi tão fácil</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, reprehenderit! Iste, a aliquam.
+                    temporibus voluptatum facere officiis tempora.</p>
+                <a class="btn animate-outline" href="conta.html">Fale Conosco</a>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="depoimentos">
+        <div class="container">
+            <h3>Nossos Depoimentos</h3>
+            <p>Lorem ipsum dolor amet consectetur, Quo cupiditate voluptas eos vitae.</p>
+            <div class="cards">
+                <div class="card-item">
+                    <img src="./assets/x_images/medio/cliente1.png" alt="Cliente">
+                    <p class="nome-user">Leonardo</p>
+                    <p class="depoimento-user">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit
+                        tempora iste provident fuga adipisci dolores, culpa perferendis voluptates quasi. Aspernatur
+                        exercitationem odio iusto debitis quisquam quos. Hic distinctio nisi libero.</p>
+                    <div class="estrelas">
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star-o" aria-hidden="true"></i>
+                        <i class="fa fa-star-o" aria-hidden="true"></i>
+                        <i class="fa fa-star-o" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <div class="card-item">
+                    <img src="./assets/x_images/medio/cliente2.png" alt="Cliente">
+                    <p class="nome-user">Paloma</p>
+                    <p class="depoimento-user">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit
+                        tempora iste provident fuga adipisci dolores, culpa perferendis voluptates quasi. Aspernatur
+                        exercitationem odio iusto debitis quisquam quos. Hic distinctio nisi libero.</p>
+                    <div class="estrelas">
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star-o" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <div class="card-item">
+                    <img src="./assets/x_images/medio/cliente1.png" alt="Cliente">
+                    <p class="nome-user">Jeferson</p>
+                    <p class="depoimento-user">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit
+                        tempora iste provident fuga adipisci dolores, culpa perferendis voluptates quasi. Aspernatur
+                        exercitationem odio iusto debitis quisquam quos. Hic distinctio nisi libero.</p>
+                    <div class="estrelas">
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star-o" aria-hidden="true"></i>
+                        <i class="fa fa-star-o" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="clientes">
+        <div class="container">
+            <h3>Nossos Clientes</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, reprehenderit! Iste, a aliquam.</p>
+            <div class="faca-mais-img">
+                <img src="./assets/x_images/logos/apple.png" alt="">
+                <img src="./assets/x_images/logos/microsoft.png" alt="">
+                <img src="./assets/x_images/logos/slack.png" alt="">
+                <img src="./assets/x_images/logos/google.png" alt="">
+            </div>
+
+        </div>
+    </section>
+
+    <section class="faca-mais">
+        <div class="container">
+            <div class="faca-mais-text">
+                <h3>Tenha um sistema seguro</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, reprehenderit! Iste, a aliquam.
+                    temporibus voluptatum facere officiis tempora.</p>
+                <a class="btn animate-outline" href="conta.html">Fale Conosco</a>
+            </div>
+            <div class="faca-mais-img">
+                <img src="./assets/x_images/medio/security.png" alt="">
+            </div>
+        </div>
+    </section>
+
+
+    <!-- </main> -->
+
+
+    <!-- ====================[ FOOTER ]==================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="links">
+                <a href=""><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+                <a href=""><i class="fa fa-youtube-square" aria-hidden="true"></i></a>
+                <a href=""><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+                <a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                <a href=""><i class="fa fa-github-square" aria-hidden="true"></i></i></a>
+                <a href=""><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+            </div>
+            <div class="copyright">
+                <!-- <p>Copyright &copy; 2023 Powered Encode Tech</p> -->
+                <small>
+                    Copyright &copy; 2023 Powered &nbsp;
+                    <img src="./assets/x_images/logos/icon_lt_amr_50x50.png" alt="Encode" width="19" height="19">
+                    &nbsp;<a href="#">Encode Tech</a>
+                </small>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ====================[ MAIN JS]==================== -->
+    <script src="./assets/js/script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="shortcut icon" href="./assets/x_images/logos/logo_gr_100x100.gif" type="image/x-icon">
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+        integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>GR System</title>
+
+</head>
+
+<body>
+    <!-- ====================[ HEADER ]==================== -->
+    <header style="background-image: url('./assets/x_images/grande/back_contat.jpg');">
+        <div class="container">
+            <nav>
+                <a href="index.html">
+                    <img src="./assets/x_images/logos/logo_gr_300x150.png" alt="Logo">
+                </a>
+                <ul class="ul">
+                    <a href="index.html">HOME</a>
+                    <a href="empre.html">EMPRESA</a>
+                    <a href="servs.html">SERVIÇOS</a>
+                    <a class="btn" href="conta.html">CONTATO</a>
+                    <div class="close-icon" onclick="closeMenu()">
+                        <i class="fa fa-times-circle" aria-hidden="true"></i>
+                    </div>
+                </ul>
+                <div class="menu-icon" onclick="openMenu()">
+                    <i class="fa fa-bars"></i>
+                </div>
+            </nav>
+            <section class="banner">
+                <div class="banner-text">
+                    <h1>Contato</h1>
+                    <p>Lorem ipsum dolor amet consectetur adipisicing, Quo cupiditate voluptas eos vitae.</p>
+                </div>
+            </section>
+        </div>
+
+    </header>
+
+    <section class="contato">
+        <div class="container">
+            <div class="mapa">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3659.2326162000622!2d-46.55395730321044!3d-23.488129499999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5f8055555555%3A0x6e4fd72917565c63!2sInternacional%20Shopping!5e0!3m2!1spt-BR!2sbr!4v1681909617309!5m2!1spt-BR!2sbr"
+                    width="100%" height="500px" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="contato-info">
+                <div class="left-side">
+                    <div>
+                        <i class="fa fa-map-marker" aria-hidden="true"></i>
+                        <p>Lorem ipsum dolor sit, 130 - Guarulhos - São Paulo SP</p>
+                    </div>
+                    <div>
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                        <p>grsystem@gmail.com</p>
+                    </div>
+                    <div>
+                        <i class="fa fa-phone" aria-hidden="true"></i>
+                        <p>+55 (11) 3685-7496</p>
+                    </div>
+                    <div>
+                        <i class="fa fa-mobile" aria-hidden="true"></i>
+                        <p>+55 (11) 94040-2020</p>
+                    </div>
+                </div>
+                <div class="right-side">
+                    <form action="">
+                        <input type="text" placeholder="Nome" required>
+                        <input type="email" placeholder="E-mail" required>
+                        <input type="text" placeholder="Assunto" required>
+                        <textarea placeholder="Sua Mensagem" cols="30" rows="10" required></textarea>
+                        <button class="btn">Enviar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====================[ FOOTER ]==================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="links">
+                <a href=""><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+                <a href=""><i class="fa fa-youtube-square" aria-hidden="true"></i></a>
+                <a href=""><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+                <a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                <a href=""><i class="fa fa-github-square" aria-hidden="true"></i></i></a>
+                <a href=""><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+            </div>
+
+            <div class="copyright">
+                <!-- <p>Copyright &copy; 2023 Powered Encode Tech</p> -->
+                <small>
+                    Copyright &copy; 2023 Powered &nbsp;
+                    <img src="./assets/x_images/logos/icon_lt_amr_50x50.png" alt="Encode" width="19" height="19">
+                    &nbsp;<a href="#">Encode Tech</a>
+                </small>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ====================[ MAIN JS]==================== -->
+    <script src="./assets/js/script.js"></script>
+
+</body>
+
+</html>
