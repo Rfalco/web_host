@@ -117,10 +117,6 @@ nav .close-icon {
     display: none;
 }
 
-
-
-
-
 .banner {
     display: flex;
     justify-content: center;
@@ -171,7 +167,6 @@ nav .close-icon {
 .faca-mais .faca-mais-img img {
     width: 100%;
 }
-
 
 
 /*========== [ depoimentos ] ==========*/
@@ -248,7 +243,6 @@ nav .close-icon {
 }
 
 
-
 /*========== [ clientes ] ==========*/
 .clientes h3,
 .clientes p {
@@ -261,7 +255,6 @@ nav .close-icon {
     align-items: center;
     justify-content: space-between;
 }
-
 
 
 /*========== [ footer ] ==========*/
@@ -294,6 +287,7 @@ nav .close-icon {
     color: #f1f1f1;
 }
 
+
 /*========== [ EMPRESA ] ==========*/
 .empresa .container {
     display: flex;
@@ -315,10 +309,12 @@ nav .close-icon {
     width: 50%;
 }
 
-.empresa .empresa-img img {
+.empresa .empresa-img img,
+.empresa .empresa-img video {
     width: 100%;
     border-radius: 10px;
 }
+
 
 /*========== [ SERVIÇOS ] ==========*/
 .servicos h3 {
@@ -402,6 +398,7 @@ nav .close-icon {
     font-size: 28px;
 }
 
+
 /*========== [ CONTATO ] ==========*/
 .contato .contato-info {
     display: flex;
@@ -449,13 +446,15 @@ nav .close-icon {
     transition: 0.3s;
     border: #f1f1f1 1px solid;
     color: #212121;
-    font-weight: lighter;
+    /* font-weight: lighter; */
 }
 
 .contato-info .right-side input:focus,
 .contato-info .right-side textarea:focus {
     border-color: #4f9cf9;
+    font-weight: normal;
 }
+
 
 .contato-info .right-side textarea {
     border: 1px solid #f1f1f1;
@@ -471,6 +470,7 @@ nav .close-icon {
 .contato-info .right-side button {
     border: none;
 }
+
 
 /*========== [ mobile ] ==========*/
 @media(max-width: 830px) {

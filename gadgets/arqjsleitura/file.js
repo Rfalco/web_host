@@ -2,7 +2,7 @@
 // https://www.youtube.com/watch?v=SWTJxnms_YA&ab_channel=DouglasHorstmann
 // https://www.youtube.com/watch?v=3t-jZ2V_Kt4&ab_channel=MaykBrito
 
-/*
+
 const input = document.querySelector('#arquivo');
 const preview = document.querySelector('#preview');
 const btnDown = document.querySelector('#download');
@@ -21,7 +21,7 @@ input.addEventListener('change', function () {
 
 
 })
-*/
+
 
 
 

@@ -1,0 +1,249 @@
+/*===============================<<<< SETTINGS >>>>==================================*/
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+/* https://www.dafont.com/pt/tesla.font */
+@font-face {
+    font-family: 'Encode Tesla';
+    src: url('../x_webfonts/TESLA.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'iDroid';
+    src: url('../x_webfonts/idroid.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Bebas Neue';
+    src: url('../x_webfonts/BebasNeue-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Palettes de Cores
+https://www.colourlovers.com/palette/2310944/tech
+https://www.colourlovers.com/palette/1878277/Tech
+https://www.colourlovers.com/palette/3697967/tech.672
+https://www.colourlovers.com/palette/24286/Lab_tech
+https://www.colourlovers.com/palette/1280613/Neo_Tech
+https://www.colourlovers.com/palette/127589/Teknokrome
+https://coolors.co/000814-001d3d-003566-ffc300-ffd60a
+*/
+:root {
+    --corx: #ba1c1b;
+    --cory: #f7e400;
+    --corb: #000000;
+    --corw: #ffffff;
+    /*
+    --cor0: #d3d3d3;
+    --cor1: #CC5803;
+    --cor2: #F7934C;
+    --cor3: #d3d3d3;
+    --cor4: #FFC15E;
+    --cor5: #1F1300;
+*/
+    --cor0: #d3d3d3;
+    --cor1: #D2E7F7;
+    --cor2: #AECFE9;
+    --cor3: #02CAFC;
+    --cor4: #1425E6;
+    --cor5: #003566;
+
+    --fntenc: 'Encode Tesla';
+    --fntpad: Arial, Verdana, Helvetica, sans-serif;
+    /*
+    --fnttit: 'Kaushan Script', cursive;
+    --fntsub: 'Kaushan Script', cursive;
+*/
+    --fnttit: 'Bebas Neue', 'Times New Roman', Times, serif;
+    --fntsub: 'iDroid';
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background-color: var(--cor0);
+    font-family: var(--fntpad);
+}
+
+header {
+    background-image: linear-gradient(to bottom, var(--cor3), var(--cor5));
+    min-height: 150px;
+    text-align: center;
+    padding-top: 40px;
+}
+
+header>h1 {
+    color: var(--cory);
+    font-family: var(--fntenc);
+    font-size: 3em;
+    margin-bottom: 15px;
+    text-shadow: 5px 5px 0px rgba(0, 0, 0, 0.250);
+}
+
+header>p {
+    color: var(--corw);
+    font-family: var(--fntpad);
+    font-size: 1.2em;
+    max-width: 520px;
+    padding: 0 10px;
+    margin: auto;
+    margin-bottom: 15px;
+    text-shadow: 5px 5px 0px rgba(0, 0, 0, 0.250);
+}
+
+nav {
+    background-color: var(--cor5);
+    box-shadow: 0px 10px 5px rgba(0, 0, 0, 0.500);
+    display: block;
+    text-align: left;
+}
+
+nav>a {
+    color: var(--corw);
+    padding: 0 25px 0 25px;
+    text-decoration: none;
+}
+
+nav>a:hover {
+    background-color: var(--corw);
+    color: var(--corb);
+    padding: 0 25px 0 25px;
+    text-decoration: none;
+}
+
+main {
+    min-width: 300px;
+    max-width: 1500px;
+    margin: auto;
+    padding: 25px;
+    background-color: var(--corw);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.411);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+main h2 {
+    color: var(--cor5);
+    font-family: var(--fntsub);
+    font-size: 2.2em;
+}
+
+main h3 {
+    color: var(--cor5);
+    font-family: var(--fntsub);
+    font-size: 1.8em;
+}
+
+main h4 {
+    color: var(--corb);
+    font-family: var(--fntpad);
+    font-weight: normal;
+    font-size: 1.5em;
+}
+
+main h5 {
+    color: var(--corb);
+    font-family: var(--fntpad);
+    font-weight: normal;
+    font-size: 1.2em;
+}
+
+main h6 {
+    color: var(--corb);
+    font-family: var(--fntpad);
+    font-weight: normal;
+    font-size: 0.8em;
+}
+
+main img {
+    width: 100%;
+}
+
+main img.imgpeq {
+    width: 50%;
+    margin: auto;
+    display: block;
+}
+
+section.top {
+    margin: 0 0 50px 0;
+}
+
+/*===============================<<<< BODY ADICIONAL >>>>==================================*/
+section.sec {
+    margin: 0;
+    padding: 20px;
+    /* para usar a largura toda utilizar 100% */
+    width: 100%;
+    /* para usar a altura toda da página colocar 100vh */
+    min-height: 41vh;
+    display: block;
+    /* display: flex; alinha no centro do quadro*/
+    position: relative;
+    align-items: center;
+    box-sizing: border-box;
+    justify-content: center;
+    /*background: linear-gradient(transparent, var(--cor5));*/
+    background: radial-gradient(var(--cor2), var(--cor5));
+    font-family: 'Poppins', Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+
+
+
+/*===============================<<<< FOOTER >>>>==================================*/
+footer {
+    background-color: rgb(80, 80, 80);
+    background-color: var(--cor5);
+    text-align: center;
+    padding: 5px;
+}
+
+.foottext {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+    font-weight: normal;
+    color: white;
+}
+
+.footlink {
+    text-decoration: none;
+    color: var(--corx);
+}
+
+.imgencode {
+    width: 25px;
+    height: 25px;
+    margin: 0 10px 0 5px;
+}
+
+.footencode {
+    font-family: 'Encode Tesla';
+    font-size: 15px;
+    color: var(--corx);
+}
+
+.footlink:hover {
+    color: var(--cory);
+    text-decoration: var(--cory);
+}
+
+/*=================================================================*/

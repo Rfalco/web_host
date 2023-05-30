@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="shortcut icon" href="./assets/x_images/logos/logo_gr_100x100.gif" type="image/x-icon">
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+        integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>GR System</title>
+
+</head>
+
+<body>
+    <!-- ====================[ HEADER ]==================== -->
+    <header style="background-image: url('./assets/x_images/grande/back_contat.jpg');">
+        <div class="container">
+            <nav>
+                <a href="index.html">
+                    <img src="./assets/x_images/logos/logo_gr_300x150.png" alt="Logo">
+                </a>
+                <ul class="ul">
+                    <a href="index.html">HOME</a>
+                    <a href="empre.html">EMPRESA</a>
+                    <a href="servs.html">SERVIÇOS</a>
+                    <a class="btn" href="conta.html">CONTATO</a>
+                    <div class="close-icon" onclick="closeMenu()">
+                        <i class="fa fa-times-circle" aria-hidden="true"></i>
+                    </div>
+                </ul>
+                <div class="menu-icon" onclick="openMenu()">
+                    <i class="fa fa-bars"></i>
+                </div>
+            </nav>
+            <section class="banner">
+                <div class="banner-text">
+                    <h1>Contato</h1>
+                    <p>Seja bem-vindo(a). Preencha os dados abaixo para que possamos nos apresentar.</p>
+                </div>
+            </section>
+        </div>
+
+    </header>
+
+    <section class="contato">
+        <div class="container">
+            <div class="mapa">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3659.7768849669264!2d-46.576257899999966!3d-23.468511199999988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cef51f5cf89d53%3A0x17f7465a0f5d0e16!2sR.%20Areia%20do%20Ros%C3%A1rio%2C%20449%20-%20Jardim%20Modelo%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2002261-060!5e0!3m2!1spt-BR!2sbr!4v1685023165310!5m2!1spt-BR!2sbr"
+                    width="100%" height="500px" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="contato-info">
+                <div class="left-side">
+                    <div>
+                        <i class="fa fa-map-marker" aria-hidden="true"></i>
+                        &nbsp;&nbsp;&nbsp;
+                        <p>Rua Areia do Rosário, 449 - Sala 65 - Jd. Modelo - SP 02261-060</p>
+                    </div>
+                    <div>
+                        <i class="fa fa-phone" aria-hidden="true"></i>
+                        &nbsp;&nbsp;
+                        <p>+55 (11) 96258-0855</p>
+                    </div>
+                    <div>
+                        <i class="fa fa-mobile" aria-hidden="true"></i>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        <p>+55 (11) 96258-0855</p>
+                    </div>
+                    <div>
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                        &nbsp;
+                        <p>gilvan@grsystem.com.br</p>
+                    </div>
+                </div>
+
+                <div class="right-side">
+                    <!-- 
+                    <form action="mailto:rafael.falco@encodetech.com.br" method="POST" data-form>
+                        <input id="contat" type="text" placeholder="Nome" required>
+                        <input id="mailus" type="email" placeholder="E-mail" required>
+                        <input id="assunt" type="text" placeholder="Assunto" required>
+                        <textarea id="messag" placeholder="Sua Mensagem" cols="30" rows="10" required></textarea>
+                        <button class="btn" type="submit" data-button>Enviar</button>
+                    </form> -->
+
+                    <!-- 
+                    <form action="https://formsubmit.co/ajax/rafael.falco@encodetech.com.br" method="POST" data-form>
+                        <label for="nome">Nome</label>
+                        <input type="text" name="nome" id="nome" placeholder="Nome" required />
+                        <label for="email">E-mail</label>
+                        <input type="email" name="email" id="email" placeholder="seu@email.com" required />
+                        <label for="mensagem">Mensagem</label>
+                        <textarea name="mensagem" id="mensagem" placeholder="Mensagem" cols="30" rows="10" required></textarea>
+                        <button class="btn" type="submit" data-button>Enviar</button>
+                    </form> -->
+
+
+                    <!-- https://www.youtube.com/watch?v=WZ0I8lbVJO0&ab_channel=DEVenvolvente
+                    https://www.staticforms.xyz/
+                    https://pt.stackoverflow.com/questions/267905/customizar-o-alert
+                    https://terminalroot.com.br/2020/02/customize-o-alert-do-seu-javascript.html
+                    https://pt.stackoverflow.com/questions/307019/como-fazer-alert-confirm-personalizado
+                 
+                    -->
+<!--                     
+                    <form action="https://api.staticforms.xyz/submit" method="post">
+                        <input type="text" name="name" placeholder="Seu Nome">
+                        <input type="text" name="email" placeholder="Seu Email" />
+                        <textarea name="message" placeholder="Sua Mensagem" cols="30" rows="5"></textarea>
+                        <input type="text" name="honeypot" style="display:none">
+                        <input type="hidden" name="accessKey" value="29824ad1-b01e-48ef-9296-d01978686582">
+                        <input type="hidden" name="subject" value="Contact us from - example.com" />
+                        <input type="hidden" name="replyTo" value="@">
+                        <input type="hidden" name="redirectTo" value="http://127.0.0.1:5500/homolog/grsystem/index.html">
+                        <button class="btn" type="submit" data-button>Enviar</button>
+                    </form> -->
+
+                    <form action="https://api.staticforms.xyz/submit" method="post">
+                        <input type="text" name="name" placeholder="Seu Nome" required />
+                        <input type="text" name="email" placeholder="Seu Email" required />
+                        <input type="hidden" name="subject" value="Contato via site" />
+                        <textarea name="message" placeholder="Sua Mensagem" cols="30" rows="5" required></textarea>
+                        <input type="text" name="honeypot" style="display:none">
+                        <!-- <input type="hidden" name="accessKey" value="29824ad1-b01e-48ef-9296-d01978686582" placeholder="gilvan email"> -->
+                        <input type="hidden" name="accessKey" value="efbfd991-28b4-437a-9897-7eda4061eb40" placeholder="meu email">
+                        <input type="hidden" name="replyTo" value="@">
+                        <input type="hidden" name="redirectTo"
+                            value="http://127.0.0.1:5500/homolog/grsystem/index.html">
+                        <!-- <button class="btn" type="submit" data-button onclick="swal('Mensagem enviada com sucesso!');">Enviar</button> -->
+                        <button id="btn1" class="btn" type="submit" data-button>Enviar</button>
+                        <button id="btn2" class="btn" type="submit" data-button>btn2</button>
+                        <button id="btn3" class="btn" type="submit" data-button>btn3</button>
+                        <button id="btn4" class="btn" type="submit" data-button>btn4</button>
+                    </form>
+                    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+                    <a href="#" onclick="swal('Testanto o SweetAlert.');">Clique aqui</a>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====================[ FOOTER ]==================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="links">
+                <a href="https://www.instagram.com/gr.system/" target="_blank"><i class="fa fa-instagram"
+                        aria-hidden="true"></i></a>
+                <a href="https://www.linkedin.com/company/gr-system-consultoria-solu%C3%A7%C3%B5es-em-ti/?viewAsMember=true"
+                    target="_blank"><i class="fa  fa-linkedin-square" aria-hidden="true"></i></a>
+                <!-- <a href="" target="_blank"><i class="fa fa-facebook-square" aria-hidden="true"></i></a> -->
+                <!-- <a href="" target="_blank"><i class="fa fa-youtube-square" aria-hidden="true"></i></a> -->
+                <!-- <a href="" target="_blank"><i class="fa fa-twitter-square" aria-hidden="true"></i></a> -->
+                <!-- <a href="" target="_blank"><i class="fa fa-github-square" aria-hidden="true"></i></i></a> -->
+            </div>
+            <div class="copyright">
+                <!-- <p>Copyright &copy; 2023 Powered Encode Tech</p> -->
+                <small>
+                    Copyright &copy; 2023 Powered &nbsp;
+                    <img src="./assets/x_images/logos/icon_lt_amr_50x50.png" alt="Encode" width="19" height="19">
+                    &nbsp;<a href="https://www.encodetech.com.br" target="_blank">Encode Tech</a>
+                </small>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ====================[ MAIN JS]==================== -->
+    <script src="./assets/js/script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,550 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Ubuntu:ital@1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Ubuntu+Mono:wght@700&family=Ubuntu:ital@1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600&family=Lobster&family=Ubuntu+Mono:wght@700&family=Ubuntu:ital@1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600&family=Courgette&family=Lobster&family=Ubuntu+Mono:wght@700&family=Ubuntu:ital@1&display=swap");
+
+:root {
+    /* ------------------- CORES E FUNDOS SITE --------------------------- */
+    --corb: #000000;
+    --corw: #ffffff;
+    --corf: #f2f2f2;
+    --txt0: rgba(14, 29, 115, 0.5);
+
+    /*==== TEMPLATE ESCURO [cor0 e cor1 (escuro) / cor2 (escuro) / cor3 e cor4 (claro)] ====*/
+    --imgTop: url("../x_images/pequeno/logo_encode_1.png");
+    --txt1: rgba(88, 192, 204, 0.945);
+    --txt2: rgba(202, 168, 127, 0.959);
+    --box5: rgba(242, 242, 242, 0.205);
+    --cor0: #142b59;
+    --cor1: #1a3073;
+    --cor2: #f2f2f2;
+    --cor3: #f27b35;
+    --cor4: #f2561d;
+
+    /*==== TEMPLATE ESCURO [cor0 e cor1 (escuro) / cor2 (escuro) / cor3 e cor4 (claro)] ====*/
+    --imgTop: url("../x_images/pequeno/logo_encode_1.png");
+    --txt1: rgba(88, 192, 204, 0.945);
+    --txt2: rgba(202, 168, 127, 0.959);
+    --box5: rgba(242, 242, 242, 0.205);
+    --cor0: #ffaaaa;
+    --cor1: #d46a6a;
+    --cor2: #801515;
+    --cor3: #aa3939;
+    --cor4: #550000;
+
+    /*==== TEMPLATE CLARO 1 [cor0 e cor1 (escuro) / cor2 (claro) / cor3 e cor4 (claro)] ====*/
+    --imgTop: url("../x_images/pequeno/logo_encode_2.png");
+    --txt1: rgba(88, 100, 204, 0.959);
+    --txt2: rgba(26, 48, 115, 0.952);
+    --box5: rgba(242, 242, 242, 0.205);
+    --cor0: #0588a6;
+    --cor1: #0396a6;
+    --cor2: #f2f2f2;
+    --cor3: #444777;
+    --cor4: #260b01;
+
+    /*==== TEMPLATE CLARO 1 [cor0 e cor1 (escuro) / cor2 (claro) / cor3 e cor4 (claro)] ====*/
+    --imgTop: url("../x_images/pequeno/logo_encode_3.png");
+    --txt1: rgba(88, 100, 204, 0.959);
+    --txt2: rgba(26, 48, 115, 0.952);
+    --box5: rgba(242, 242, 242, 0.205);
+    --cor0: #bf7396;
+    --cor1: #d94a8c;
+    --cor2: #f2f2f2;
+    --cor3: #44308c;
+    --cor4: #4b32a6;
+
+    /*==== TEMPLATE ESCURO 1 [cor0 e cor1 (escuro) / cor2 (escuro) / cor3 e cor4 (claro)] ====*/
+    --imgTop: url("../x_images/pequeno/logo_encode_3.png");
+    --txt1: rgba(88, 100, 204, 0.959);
+    --txt2: rgba(26, 48, 115, 0.952);
+    --box5: rgba(242, 242, 242, 0.205);
+    --cor0: #3b3c40;
+    --cor1: #202126;
+    --cor2: #d7d7d9;
+    --cor3: #a6a7ad;
+    --cor4: #8c8c8c;
+
+    /*==== TEMPLATE ESCURO 2 [cor0 e cor1 (escuro) / cor2 (claro) / cor3 e cor4 (claro)] ====*/
+    --imgTop: url("../x_images/pequeno/logo_encode_1.png");
+    --txt1: rgba(88, 100, 204, 0.959);
+    --txt2: rgba(26, 48, 115, 0.952);
+    --box5: rgba(242, 242, 242, 0.205);
+    --cor0: #3d90d9;
+    --cor1: #1d2659;
+    --cor2: #d7d7d9;
+    --cor3: #42378c;
+    --cor4: #6e49bf;
+
+    /*==== TEMPLATE ESCURO 2 [cor0 e cor1 (escuro) / cor2 (claro) / cor3 e cor4 (claro)] ====*/
+    --imgTop: url("../x_images/pequeno/logo_encode_1.png");
+    --txt1: rgba(88, 100, 204, 0.959);
+    --txt2: rgba(26, 48, 115, 0.952);
+    --box5: rgba(242, 242, 242, 0.205);
+    --cor0: #3c3781;
+    --cor1: #f2a516;
+    --cor2: #d7d7d9;
+    --cor3: #8ed979;
+    --cor4: #6a44f2;
+
+    /*==== TEMPLATE ESCURO 2 [cor0 e cor1 (escuro) / cor2 (claro) / cor3 e cor4 (claro)] ====*/
+    /*
+    --imgTop: url('../x_images/pequeno/logo_encode_1.png');
+    --txt1: rgba(88, 100, 204, 0.959);
+    --txt2: rgba(26, 48, 115, 0.952);
+    --box5: rgba(242, 242, 242, 0.205);
+    --cor0: #0E4C73;
+    --cor1: #87BF4E;
+    --cor2: #D7D7D9;
+    --cor3: #87BF4E;
+    --cor4: #0AA614;
+
+    /*==== TEMPLATE ESCURO 2 [cor0 e cor1 (escuro) / cor2 (claro) / cor3 e cor4 (claro)] ====*/
+    /*
+    --imgTop: url('../x_images/pequeno/logo_encode_1.png');
+    --txt1: rgba(88, 100, 204, 0.959);
+    --txt2: rgba(26, 48, 115, 0.952);
+    --box5: rgba(242, 242, 242, 0.205);
+    --cor0: #D99A4E;
+    --cor1: #D4D941;
+    --cor2: #D7D7D9;
+    --cor3: #49731F;
+    --cor4: #0F2940;
+
+    /*==== TEMPLATE ESCURO 2 [cor0 e cor1 (escuro) / cor2 (claro) / cor3 e cor4 (claro)] ====*/
+    /*
+    --imgTop: url('../x_images/pequeno/logo_encode_1.png');
+    --txt1: rgba(88, 100, 204, 0.959);
+    --txt2: rgba(26, 48, 115, 0.952);
+    --box5: rgba(197, 137, 181, 0.2);
+    --cor0: #CEB4D9;
+    --cor1: #E7DCF2;
+    --cor2: #F2F2F2;
+    --cor3: #BF78AC;
+    --cor4: #7E688C;
+
+ 
+    /* ------------------- FONTES E TAMANHOS --------------------------- */
+    /* --fnttam: 14px/1.5; */
+    /* --fnttam: 12px/1; */
+    /* --fnttam: 12px/1.5; */
+    --fnttam: 12px/2;
+
+    /* --fntpad: 'Courier New', Courier, monospace; */
+    /* --fntpad: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+    /* --fntpad: 'Lucida Sans Regular', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
+    /* --fntpad: Arial, Helvetica, sans-serif; */
+    /* --fntpad: Verdana, Geneva, Tahoma, sans-serif; */
+    /* --fntpad: Georgia, 'Times New Roman', Times, serif; */
+    /* --fntpad: 'segoe ui', 'lucida sans unicode', 'lucida grande', lucida, sans-serif; */
+    /* --fntpad: 'Lobster', cursive; */
+    /* --fntpad: 'Ubuntu', sans-serif; */
+    /* --fntpad: 'Ubuntu Mono', monospace; */
+    /* --fntpad: 'Courgette', cursive; */
+    --fntpad: "Chakra Petch", sans-serif;
+}
+
+/*====================================================================================*/
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: var(--corf);
+    color: var(--txt0);
+    font: var(--fnttam) var(--fntpad);
+}
+
+.cleaner {
+    clear: both;
+    height: 1px;
+}
+
+/*---------------------- TOPO DO SITE --------------------------------*/
+
+header {
+    position: relative;
+    width: 780px;
+    margin: 0 auto;
+}
+
+.topbg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 132px;
+}
+
+.header {
+    position: relative;
+    width: 780px;
+    height: 130px;
+    background: var(--cor4);
+}
+
+.header .box {
+    position: absolute;
+    top: 6px;
+    width: 75px;
+    height: 25px;
+}
+
+.header h1 {
+    position: absolute;
+    top: 65px;
+    left: 60px;
+    margin: 0;
+    width: 8em;
+    line-height: 1.33;
+    font-size: 3.5em;
+    font-weight: bold;
+    text-align: left;
+    color: var(--cor3);
+}
+
+.header h2 {
+    position: absolute;
+    top: 65px;
+    right: 140px;
+    margin: 0;
+    width: 8em;
+    font-size: 15px;
+    line-height: 1.33;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: right;
+    color: var(--cor3);
+}
+
+.hdr-overlay {
+    position: relative;
+    top: 1px;
+    left: 1px;
+    width: 780px;
+    height: 145px;
+    background: var(--imgTop) top right no-repeat;
+    /* logo transparente */
+}
+
+.hdr-box0 {
+    left: 15px;
+    background: var(--cor0);
+}
+
+.hdr-box1 {
+    left: 100px;
+    background: var(--cor1);
+}
+
+.hdr-box2 {
+    left: 185px;
+    background: var(--cor2);
+}
+
+.hdr-box3 {
+    left: 270px;
+    background: var(--cor3);
+}
+
+.hdr-box4 {
+    left: 355px;
+    background: var(--cor4);
+}
+
+.hdr-box5 {
+    left: 440px;
+    background: var(--box5);
+}
+
+.header .hdr-box5 {
+    position: absolute;
+    top: 6px;
+    width: 340px;
+    height: 25px;
+}
+
+/*---------------------- MENU DO SITE --------------------------------*/
+
+.menu {
+    margin: 0;
+    padding: 1px 0;
+    list-style-type: none;
+    height: 26px;
+    border-bottom: 1px solid var(--cor1);
+}
+
+.menu li {
+    float: left;
+    margin: 0;
+    padding: 0;
+    width: 20%;
+}
+
+.menu a {
+    position: relative;
+    font-weight: bold;
+    display: block;
+    margin: 1px;
+    height: 24px;
+    font-size: 12px;
+    line-height: 24px;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    background: var(--cor0);
+    color: var(--cor3);
+}
+
+.menu a span {
+    display: block;
+    position: absolute;
+    top: 5px;
+    left: 8px;
+    width: 8px;
+    height: 8px;
+    background: var(--cor2);
+}
+
+.menu a.sel {
+    background: var(--cor4);
+    color: var(--cor0);
+}
+
+.menu a:hover {
+    background: var(--cor4);
+    color: var(--cor0);
+}
+
+/*---------------------- CORPO DO SITE --------------------------------*/
+
+main {
+    position: relative;
+    width: 783px;
+    margin: 0 auto;
+    padding: 0px 0 0 0;
+}
+
+.container {
+    padding: 1px;
+    color: var(--txt0);
+}
+
+.container a {
+    padding: 2px 3px;
+}
+
+.container p {
+    margin: 0.25em 0;
+}
+
+.left {
+    float: left;
+    width: 300px;
+    padding: 10px 20px;
+    border-right: 1px dotted var(--txt1);
+}
+
+.left .titpri {
+    color: var(--cor3);
+}
+
+.left .topico {
+    color: var(--cor3);
+}
+
+.left h3 {
+    margin: 0.5em 0 0.3em;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.left .toptit {
+    float: left;
+    font-weight: bold;
+}
+
+.left .toptxt {
+    margin: 1em 0 1em 6em;
+}
+
+.ico {
+    float: left;
+    padding: 1px;
+    background: var(--cor3);
+}
+
+.left h4 {
+    margin: 0 0 0 6em;
+    font-size: 100%;
+    font-weight: bold;
+}
+
+.left ul {
+    margin: 0 0 0 6em;
+    padding: 0;
+    color: var(--cor4);
+    list-style-type: square;
+    list-style-position: inside;
+}
+
+.left a {
+    font-weight: bold;
+    color: var(--cor4);
+}
+
+.left a:hover {
+    background: var(--cor3);
+    color: var(--cor0);
+}
+
+/* -------------------------------------------------------------------- */
+
+.right {
+    float: right;
+    width: 390px;
+    margin: 0 20px 0 0;
+    padding: 10px 0;
+}
+
+.right h3 {
+    clear: left;
+    margin: 0.5em 0 0.3em 0;
+    font-size: 12px;
+    color: var(--cor3);
+}
+
+.right h3 span {
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    margin-right: 1em;
+    border: 1px solid var(--cor3);
+    background-color: var(--cor3);
+    vertical-align: middle;
+}
+
+.right .titpri {
+    color: var(--cor3);
+}
+
+.right .topico {
+    color: var(--cor3);
+}
+
+.right .toptit {
+    float: left;
+    font-weight: bold;
+}
+
+.right .toptxt {
+    margin: 1em 0 1em 6em;
+}
+
+.right .photo {
+    float: left;
+    margin: 0 15px 15px 0;
+}
+
+.right h4 {
+    margin: 0;
+    font-size: 100%;
+    font-weight: bold;
+}
+
+.right .link {
+    text-align: right;
+}
+
+.right .link a {
+    font-weight: bold;
+    color: var(--cor4);
+}
+
+.right .link a:hover {
+    background: var(--cor0);
+    color: var(--cor2);
+}
+
+.right a {
+    font-weight: bold;
+    color: var(--cor4);
+}
+
+.right a:hover {
+    background: var(--cor3);
+    color: var(--cor0);
+}
+
+.right button {
+    float: right;
+    margin: 15px 0 20px 0;
+    width: 150px;
+    height: 30px;
+    background: var(--cor4);
+    color: var(--cor1);
+    border: 1px solid var(--cor2);
+    text-align: center;
+    font-size: 14px;
+    line-height: 25px;
+}
+
+.rbox {
+    float: left;
+    position: relative;
+    width: 180px;
+    margin: 15px 0 20px 0;
+    padding: 2px 5px 2px 30px;
+    font-size: 10px;
+    line-height: 1.2;
+    font-weight: bold;
+    background: var(--cor0);
+    color: var(--cor4);
+}
+
+.rbox span {
+    display: block;
+    position: absolute;
+    top: 5px;
+    left: 8px;
+    width: 8px;
+    height: 8px;
+    background: var(--cor4);
+}
+
+/*---------------------- RODAPÉ DO SITE --------------------------------*/
+
+footer {
+    position: relative;
+    width: 780px;
+    margin: 0 auto;
+    padding: 0 0 0 0;
+}
+
+.footer {
+    margin: 10px 0 10px 0;
+    padding: 5px 0;
+    font-weight: bold;
+    text-align: center;
+    border-top: 1px solid var(--cor3);
+    border-bottom: 1px solid var(--cor3);
+    background: var(--cor0);
+    color: var(--cor3);
+}
+
+.footer span {
+    color: var(--cor2);
+}
+
+.footer a {
+    padding: 3px 5px;
+    color: var(--cor3);
+}
+
+.footer a:hover {
+    background: var(--cor4);
+    color: var(--cor0);
+}

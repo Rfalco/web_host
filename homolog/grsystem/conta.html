@@ -13,6 +13,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
         integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
     <title>GR System</title>
 
@@ -42,7 +46,7 @@
             <section class="banner">
                 <div class="banner-text">
                     <h1>Contato</h1>
-                    <p>Lorem ipsum dolor amet consectetur adipisicing, Quo cupiditate voluptas eos vitae.</p>
+                    <p>Seja bem-vindo(a). Preencha os dados abaixo para que possamos nos apresentar.</p>
                 </div>
             </section>
         </div>
@@ -53,7 +57,7 @@
         <div class="container">
             <div class="mapa">
                 <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3659.2326162000622!2d-46.55395730321044!3d-23.488129499999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5f8055555555%3A0x6e4fd72917565c63!2sInternacional%20Shopping!5e0!3m2!1spt-BR!2sbr!4v1681909617309!5m2!1spt-BR!2sbr"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3659.7768849669264!2d-46.576257899999966!3d-23.468511199999988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cef51f5cf89d53%3A0x17f7465a0f5d0e16!2sR.%20Areia%20do%20Ros%C3%A1rio%2C%20449%20-%20Jardim%20Modelo%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2002261-060!5e0!3m2!1spt-BR!2sbr!4v1685023165310!5m2!1spt-BR!2sbr"
                     width="100%" height="500px" style="border:0;" allowfullscreen="" loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
@@ -61,28 +65,39 @@
                 <div class="left-side">
                     <div>
                         <i class="fa fa-map-marker" aria-hidden="true"></i>
-                        <p>Lorem ipsum dolor sit, 130 - Guarulhos - São Paulo SP</p>
-                    </div>
-                    <div>
-                        <i class="fa fa-envelope" aria-hidden="true"></i>
-                        <p>grsystem@gmail.com</p>
+                        &nbsp;&nbsp;&nbsp;
+                        <p>Rua Areia do Rosário, 449 - Sala 65 - Jd. Modelo - SP 02261-060</p>
                     </div>
                     <div>
                         <i class="fa fa-phone" aria-hidden="true"></i>
-                        <p>+55 (11) 3685-7496</p>
+                        &nbsp;&nbsp;
+                        <p>+55 (11) 96258-0855</p>
                     </div>
                     <div>
                         <i class="fa fa-mobile" aria-hidden="true"></i>
-                        <p>+55 (11) 94040-2020</p>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        <p>+55 (11) 96258-0855</p>
+                    </div>
+                    <div>
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                        &nbsp;
+                        <p>gilvan@grsystem.com.br</p>
                     </div>
                 </div>
+
                 <div class="right-side">
-                    <form action="">
-                        <input type="text" placeholder="Nome" required>
-                        <input type="email" placeholder="E-mail" required>
-                        <input type="text" placeholder="Assunto" required>
-                        <textarea placeholder="Sua Mensagem" cols="30" rows="10" required></textarea>
-                        <button class="btn">Enviar</button>
+
+                    <form action="https://api.staticforms.xyz/submit" method="post">
+                        <input type="text" name="name" placeholder="Seu Nome" required />
+                        <input type="text" name="email" placeholder="Seu Email" required />
+                        <input type="hidden" name="subject" value="Contato Site GR-System" />
+                        <textarea name="message" placeholder="Sua Mensagem" cols="30" rows="5" required></textarea>
+                        <input type="text" name="honeypot" style="display:none">
+                        <input type="hidden" name="accessKey" value="29824ad1-b01e-48ef-9296-d01978686582" />
+                        <input type="hidden" name="replyTo" value="@">
+                        <input type="hidden" name="redirectTo"
+                            value="https://encodetech.com.br/developer/site_grconsult/index.html">
+                        <button id="btnEnv" class="btn" type="submit" data-button>Enviar</button>
                     </form>
                 </div>
             </div>
@@ -93,20 +108,16 @@
     <footer class="footer">
         <div class="container">
             <div class="links">
-                <a href=""><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
-                <a href=""><i class="fa fa-youtube-square" aria-hidden="true"></i></a>
-                <a href=""><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
-                <a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                <a href=""><i class="fa fa-github-square" aria-hidden="true"></i></i></a>
-                <a href=""><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+                <a href="https://www.instagram.com/gr.system/" target="_blank"><i class="fa fa-instagram"
+                        aria-hidden="true"></i></a>
+                <a href="https://www.linkedin.com/company/gr-system-consultoria-solu%C3%A7%C3%B5es-em-ti/?viewAsMember=true"
+                    target="_blank"><i class="fa  fa-linkedin-square" aria-hidden="true"></i></a>
             </div>
-
             <div class="copyright">
-                <!-- <p>Copyright &copy; 2023 Powered Encode Tech</p> -->
                 <small>
                     Copyright &copy; 2023 Powered &nbsp;
                     <img src="./assets/x_images/logos/icon_lt_amr_50x50.png" alt="Encode" width="19" height="19">
-                    &nbsp;<a href="#">Encode Tech</a>
+                    &nbsp;<a href="https://www.encodetech.com.br" target="_blank">Encode Tech</a>
                 </small>
             </div>
         </div>
