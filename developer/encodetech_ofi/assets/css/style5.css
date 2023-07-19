@@ -1,0 +1,159 @@
+/*=======<<<< LAYOUT - 5 >>>>========================================================*/
+/*===============================<<<< SETTINGS >>>>==================================*/
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Ubuntu:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Ubuntu+Mono:wght@700&family=Ubuntu:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600&family=Lobster&family=Ubuntu+Mono:wght@700&family=Ubuntu:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600&family=Courgette&family=Lobster&family=Ubuntu+Mono:wght@700&family=Ubuntu:ital@1&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+*{
+    scrollbar-width: 12px;
+    scrollbar-color: #5a5a5a #9a9a9a;
+}
+::-webkit-scrollbar{
+    width: 12px;
+}
+
+*::-webkit-scrollbar-track{
+    background: #9a9a9a;
+}
+
+*::-webkit-scrollbar-thumb{
+    background-color: #5a5a5a;
+    border-radius: 20px;
+    border: 3px solid #9a9a9a;
+}
+
+body {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 3px;
+    flex: 1 1 100vw;
+    background-color: #f7c9a4;
+}
+
+header,
+nav,
+main,
+aside,
+footer {
+    display: flex;
+    margin: 3px;
+    background-color: #a1a1a1;
+}
+
+header {
+    flex: 1 1 100vw;
+}
+
+header #logo {
+    flex: 0 1 200px;
+    background-color: #ece6e6;
+}
+
+#openMenu,
+#closeMenu {
+    border: none;
+    background: none;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 0px 5px 0px 5px;
+    cursor: pointer;
+    display: none;
+}
+
+nav {
+    flex: 1 1 100vw;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+nav a {
+    margin: 3%;
+    font-size: 1.5em;
+}
+
+main {
+    flex: 20 1 500px;
+    flex-wrap: wrap;
+    overflow: auto;
+}
+
+main section {
+    width: 100%;
+    height: 2000px;
+    margin: 10px;
+    background: linear-gradient(#9a9a9a, #5a5a5a, #1a1a1a);
+}
+
+aside {
+    flex: 1 1 200px;
+}
+
+footer {
+    flex: 1 1 100vw;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+@media only screen and (max-width: 923px) {
+
+    header {
+        order: 0;
+    }
+
+    main {
+        order: 1;
+    }
+
+    aside {
+        flex: 1 1 100vw;
+        order: 2;
+    }
+
+    footer {
+        order: 3;
+    }
+}
+
+@media only screen and (max-width: 717px) {
+
+    #openMenu,
+    #closeMenu {
+        display: block;
+    }
+
+    #openMenu{
+        margin-left: auto;
+    }
+
+    #closeMenu {
+        position: fixed;
+        right: 15px;
+        top: 15px;
+    }
+
+    nav {
+        position: fixed;
+        flex-direction: column;
+        width: 100vw;
+        background-color: rgba(255, 255, 255, 0.8);
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        display: none;
+        opacity: 0;
+        transition: 0.3s;
+    }
+}

@@ -1,0 +1,32 @@
+{
+    "clientes": [
+        {
+            "cliidd": "000001",
+            "clinam": "RAFAEL FALCO",
+            "cliema": "rfalcox@gmail.com",
+            "cliend": "Rua Primitiva Vianco, 446",
+            "cliest": "SP"
+        },
+        {
+            "cliidd": "000002",
+            "clinam": "LUIS HENRIQUE FALCO",
+            "cliema": "lfalcox@gmail.com",
+            "cliend": "Rua Antonio Agú, 556",
+            "cliest": "SP"
+        },
+        {
+            "cliidd": "000003",
+            "clinam": "YASMIN FALCO",
+            "cliema": "yfalcox@gmail.com",
+            "cliend": "Avenida dos Autonomistas, 885",
+            "cliest": "SP"
+        },
+        {
+            "cliidd": "000004",
+            "clinam": "ZORAMI FALCO",
+            "cliema": "zfalcox@gmail.com",
+            "cliend": "Avenida Santo Antonio, 987",
+            "cliest": "SP"
+        }
+    ]
+}

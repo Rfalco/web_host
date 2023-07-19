@@ -1,0 +1,325 @@
+<!-- 
+
+    https://blog.fellyph.com.br/tutoriais/utilizando-localstorage-para-armazenar-dados-no-device/
+    https://www.youtube.com/watch?v=FXlAf_iIDeo&ab_channel=MatheusBattisti-HoradeCodar
+    https://www.youtube.com/watch?v=6IF0eX9R_v0&ab_channel=CodingMindBrasil
+    https://www.youtube.com/watch?v=uXC2zXaa5_E&ab_channel=CFBCursos
+    https://www.youtube.com/watch?v=De5np8phQxo&ab_channel=Rocketseat
+
+https://www.devmedia.com.br/trabalhando-com-html5-local-storage-e-json/29045
+
+http://jsfiddle.net/pxjnu0k2/5/
+
+
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>JS - Local Storage</title>
+
+</head>
+
+<body class="container">
+
+    <header class="areahead">
+        <div>
+            <p>
+            <h1>Local Storage - JavaScript</h1>
+            </p>
+        </div>
+    </header>
+
+    <main class="areamain">
+
+        <section class="arealog">
+            <div class="pagelog">
+                <img src="../../assets/x_images/encode/icon_lt_amr_50x50.png" alt="" srcset="">
+                <form id="formlg" method="POST" class="formLogin">
+                    <h1>Login</h1>
+                    <p>Digite os seus dados de acesso no campo abaixo.</p>
+                    <label for="email">E-mail</label>
+                    <input id="usuinf" type="email" placeholder="Digite seu e-mail" autofocus="true" required />
+                    <label for="password">Senha</label>
+                    <input id="pswinf" type="password" placeholder="Digite sua senha" required />
+                    <input type="submit" value="Acessar" class="btn" />
+                    <div class="linklog">
+                        <a href="#" class="linknew">Criar conta</a>
+                        <a href="#" class="linkesq" onclick="limpaDados();">Limpa Dados</a>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <section class="areacad">
+            <div class="pagecad">
+                <img src="../../assets/x_images/encode/icon_lt_amr_50x50.png" alt="" srcset="">
+
+                <p>
+                <h2>Selecione o Cadastro</h2>
+                </p>
+
+                <form id="formsl" method="POST" class="formLogin">
+                    <input type="submit" value="Clientes" class="btn" />
+                    <input type="submit" value="Produtos" class="btn" />
+                </form>
+
+                <div id="lstacs"></div>
+
+            </div>
+        </section>
+
+
+        <section class="areacli">
+            <div class="pagecli">
+                <!-- <img src="../../assets/x_images/encode/icon_lt_amr_50x50.png" alt="" srcset=""> -->
+
+                <p>
+                <h2>Cadastro de Clientes</h2>
+                </p>
+
+                <form id="formcl" method="POST" class="formLogin">
+                    <h1>Clientes</h1>
+                    <p>Digite os dados do novo cliente.</p>
+                    <label for="nomcli">Nome</label>
+                    <input id="nomcli" type="text" placeholder="Nome do cliente" autofocus="true" required />
+                    <label for="emacli">E-mail</label>
+                    <input id="emacli" type="text" placeholder="E-mail do cliente" autofocus="true" required />
+                    <label for="endcli">Endereço</label>
+                    <input id="endcli" type="text" placeholder="Endereço" autofocus="true" required />
+                    <label for="estcli">Estado</label>
+                    <input id="estcli" type="text" placeholder="Estado do cliente" autofocus="true" required />
+                    <div>
+                        <input type="submit" value="Cadastro" class="btncli" />
+                        <input type="submit" value="Voltar" class="btncli" />
+                    </div>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="areafoot">
+        <div>
+            <h4>
+                <p>Rodapé</p>
+            </h4>
+        </div>
+    </footer>
+
+
+
+    <!-- <script src="./script.js" defer></script> -->
+
+    <script>
+        // *FUNÇÃO PARA LIMPAR LOCAL STORAGE E RE-INICIAR
+        function limpaDados() {
+
+            if (localStorage.getItem('bd_usuarios')) {
+
+                localStorage.removeItem("bd_usuarios");
+
+                localStorage.setItem('bd_usuarios', '[{"usuidd": "1","usunam": "RAFAEL FALCO","usuema": "rfalcox@gmail.com","ususen": "q1W@zaXS","dtanas": "19730817"},{"usuidd": "2","usunam": "LUIS HENRIQUE FALCO","usuema": "lfalcox@gmail.com","ususen": "XXas#@56","dtanas": "20070414"},{"usuidd": "3","usunam": "YASMIN FALCO","usuema": "yfalcox@gmail.com","ususen": "23@!qwXZ","dtanas": "20070414"},{"usuidd": "4","usunam": "ZORAMI FALCO","usuema": "zfalcox@gmail.com","ususen": "AZsx@!21","dtanas": "19730207"}]');
+
+            } else {
+                // * RESGATAR UM ITEM DA localStorage
+                const sUsuBdd = localStorage.getItem("bd_usuarios");
+                console.log(sUsuBdd);
+            }
+
+            if (localStorage.getItem('bd_produtos')) {
+
+                localStorage.removeItem("bd_produtos");
+
+                localStorage.setItem('bd_produtos', '[{"prdidd": "1","prddsc": "PRODUTO 00001","prdqtd": "1000","prdval": "50,00"},{"prdidd": "2","prddsc": "PRODUTO 00002","prdqtd": "200","prdval": "10,00"},{"prdidd": "3","prddsc": "PRODUTO 00003","prdqtd": "3000","prdval": "30,00"},{"prdidd": "4","prddsc": "PRODUTO 00004","prdqtd": "40","prdval": "1,00"}]');
+
+            } else {
+                // * RESGATAR UM ITEM DA localStorage
+                const sPrdBdd = localStorage.getItem("bd_produtos");
+                console.log(sPrdBdd);
+            }
+
+            if (localStorage.getItem('bd_clientes')) {
+
+                localStorage.removeItem("bd_clientes");
+
+                localStorage.setItem('bd_clientes', '[{"cliidd": "1","clinam": "RAFAEL FALCO","cliema": "rfalcox@gmail.com","cliend": "Rua Primitiva Vianco, 446","cliest": "SP"},{"cliidd": "2","clinam": "LUIS HENRIQUE FALCO","cliema": "lfalcox@gmail.com","cliend": "Rua Antonio Agú, 556","cliest": "SP"},{"cliidd": "3","clinam": "YASMIN FALCO","cliema": "yfalcox@gmail.com","cliend": "Avenida dos Autonomistas, 885","cliest": "SP"},{"cliidd": "4","clinam": "ZORAMI FALCO","cliema": "zfalcox@gmail.com","cliend": "Avenida Santo Antonio, 987","cliest": "SP"}]');
+            } else {
+                // * RESGATAR UM ITEM DA localStorage
+                const sCliBdd = localStorage.getItem("bd_clientes");
+                console.log(sCliBdd);
+            }
+        }
+
+        document.querySelector('.pagecad').style.display = 'none';
+        document.querySelector('.pagecli').style.display = 'none';
+        document.querySelector('.arealog').style.display = 'block';
+
+        const oFormLg = document.querySelector('#formlg');
+        const oFormSl = document.querySelector('#formsl');
+        const oFormCl = document.querySelector('#formcl');
+        const olstacs = document.querySelector('#lstacs');
+        const oUsuInf = document.querySelector('#usuinf');
+        const oPswInf = document.querySelector('#pswinf');
+
+        oFormLg.addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            let sVar1 = oUsuInf.value;
+            let sVar2 = oPswInf.value;
+            const oLstUsu = JSON.parse(localStorage.getItem('bd_usuarios'));
+
+            if (oLstUsu.length > 0) {
+                for (let nI = 0; nI < oLstUsu.length; nI++) {
+                    if (oLstUsu[nI].usuema === sVar1) {
+                        if (oLstUsu[nI].ususen === sVar2) {
+                            let usuatv = `[{"usuidd": "${oLstUsu[nI].usuidd}","usunam": "${oLstUsu[nI].usunam}","usuema": "${oLstUsu[nI].usuema}","ususen": "${oLstUsu[nI].ususen}","dtanas": "${oLstUsu[nI].dtanas}"}]`
+
+                            // Save data to sessionStorage
+                            sessionStorage.setItem("usuatv", `${usuatv}`);
+
+                            document.querySelector('.arealog').style.display = 'none';
+                            document.querySelector('.pagecli').style.display = 'none';
+                            document.querySelector('.pagecad').style.display = 'block';
+
+                            // olstacs.innerHTML = `<tbody><tr id="rowTable'${nI}'"><td> ${oLstUsu[nI].usuidd} </td><td> ${oLstUsu[nI].usunam} </td><td> ${oLstUsu[nI].usuema} </td><td> ${oLstUsu[nI].ususen} </td><td> ${oLstUsu[nI].dtanas} </td></tr></tbody>`;
+
+                            break;
+
+                        } else {
+
+                            console.log("Senha Inválida");
+                            document.querySelector('.pagecli').style.display = 'none';
+                            document.querySelector('.pagecad').style.display = 'none';
+                            document.querySelector('.arealog').style.display = 'block';
+
+                            // Remove all saved data from sessionStorage
+                            // sessionStorage.removeItem("usuatv");
+                        }
+                    } else {
+                        console.log("Email Inválido");
+                    }
+                }
+            } else {
+                document.querySelector('.pagecli').style.display = 'none';
+                document.querySelector('.pagecad').style.display = 'none';
+                document.querySelector('.arealog').style.display = 'block';
+            }
+
+
+        })
+
+
+        oFormSl.addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            // Save data to sessionStorage
+            const oUsuLog = JSON.parse(sessionStorage.getItem('usuatv'));
+
+            if (oUsuLog.length > 0) {
+                const oLstCli = JSON.parse(localStorage.getItem('bd_clientes'));
+                const oLstPrd = JSON.parse(localStorage.getItem('bd_produtos'));
+                document.querySelector('.arealog').style.display = 'none';
+                document.querySelector('.pagecli').style.display = 'block';
+                document.querySelector('.pagecad').style.display = 'none';
+                alert(`Usuário: ${oUsuLog[00].usunam}`);
+
+            } else {
+                document.querySelector('.pagecli').style.display = 'none';
+                document.querySelector('.pagecad').style.display = 'none';
+                document.querySelector('.arealog').style.display = 'block';
+                alert("Usuário não está Logado!");
+            }
+        })
+
+        oFormCl.addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            const oNomCli = document.querySelector('#nomcli').value;
+            const oEmaCli = document.querySelector('#emacli').value;
+            const oEndCli = document.querySelector('#endcli').value;
+            const oEstCli = document.querySelector('#estcli').value;
+
+            // Save data to localstorage
+            const oLstCli = JSON.parse(localStorage.getItem('bd_clientes'));
+            let nCont = oLstCli.length + 1;
+            let sNewReg = '{"cliidd": "'+ nCont +'","clinam": "'+ oNomCli +'","cliema": "'+ oEmaCli +'","cliend": "'+ oEndCli +'","cliest": "'+ oEstCli +'"}'
+
+            console.log(sNewReg);
+
+            oLstCli.push(sNewReg);
+
+            console.log(oLstCli);
+
+            // localStorage.setItem('bd_clientes', [`{"cliidd": "${nCont}","clinam": "${oNomCli}","cliema": "${oEmaCli}","cliend": "${oEndCli}","cliest": "${oEstCli}"}`]);
+
+            let jsonList = JSON.stringify(oLstCli)
+            console.log(jsonList);
+
+            let result = jsonList.replace('\"', '"');
+
+            console.log(result);
+
+            localStorage.setItem('bd_clientes', `[${result}]`);
+
+            oFormCl.reset();
+
+            /*
+                        [{"cliidd":"1","clinam":"RAFAEL FALCO","cliema":"rfalcox@gmail.com","cliend":"Rua Primitiva Vianco, 446","cliest":"SP"},{"cliidd":"2","clinam":"LUIS HENRIQUE FALCO","cliema":"lfalcox@gmail.com","cliend":"Rua Antonio Agú, 556","cliest":"SP"},{"cliidd":"3","clinam":"YASMIN FALCO","cliema":"yfalcox@gmail.com","cliend":"Avenida dos Autonomistas, 885","cliest":"SP"},{"cliidd":"4","clinam":"ZORAMI FALCO","cliema":"zfalcox@gmail.com","cliend":"Avenida Santo Antonio, 987","cliest":"SP"},"'{\"cliidd\": \"5\",\"clinam\": \"Teste Teste 001\",\"cliema\": \"teste001@gmail.com\",\"cliend\": \"Avenida Cruzeiro do Sul, 150\",\"cliest\": \"SP\"}'"]
+            */
+
+            // if (isArray(oLstCli)) {
+            // oLstCli.push(`{cliidd: '${nCont}',clinam: '${oNomCli}',cliema: '${oEmaCli}',cliend: '${oEndCli}',cliest: '${oEstCli}'}`);
+            // } else {
+            // oLstCli = [oLstCli, `{"cliidd": "${nCont}","clinam": "${oNomCli}","cliema": "${oEmaCli}","cliend": "${oEndCli}","cliest": "${oEstCli}"}`];
+            // console.log(oLstCli);
+            // }
+
+            // 
+
+
+            // console.log(oUsuLog);
+
+            // if (oUsuLog.length > 0) {
+            //     document.querySelector('.arealog').style.display = 'none';
+            //     document.querySelector('.pagecli').style.display = 'block';
+            //     document.querySelector('.pagecad').style.display = 'none';
+            //     alert(`Usuário: ${oUsuLog[00].usunam}`);
+
+            // } else {
+            //     document.querySelector('.pagecli').style.display = 'none';
+            //     document.querySelector('.pagecad').style.display = 'none';
+            //     document.querySelector('.arealog').style.display = 'block';
+            //     alert("Usuário não está Logado!");
+
+            // }
+
+            // console.log(oLstCli);
+            // console.log(oLstPrd);
+
+        })
+
+
+
+        // document.querySelector('.arealog').style.display = 'none';
+        // document.querySelector('.pagecli').style.display = 'none';
+        // document.querySelector('.pagecad').style.display = 'block';
+
+
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>

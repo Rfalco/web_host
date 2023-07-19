@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../assets/x_images/encode/icon_cb_amr_32x32.png" type="image/x-icon">
+    <title>Leitura de Arquivo</title>
+</head>
+
+<style>
+    div {
+        background-color: #7fff00;
+        padding: 15px;
+    }
+</style>
+
+<body>
+
+    <div id="usuarios">
+
+    </div>
+
+    <script>
+        let divUsu = document.querySelector("#usuarios")
+
+        fetch("bd_usuarios.json").then((response) => {
+            response.json().then((dados) => {
+                console.log(dados.usuarios)
+                dados.usuarios.map((usuario) => {
+                    divUsu.innerHTML += `<li> ${usuario.usuidd} - ${usuario.usunam} - ${usuario.usuema} - ${usuario.ususen} - ${usuario.dtanas}</li>`
+                })
+            })
+        })
+    </script>
+
+</body>
+
+</html>

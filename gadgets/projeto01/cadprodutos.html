@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="./assets/x_images/pequeno/icon_cb_amr_16x16.png" type="image/x-icon">
+
+    <title>Cadastro Produto</title>
+</head>
+
+
+
+<body>
+    <div id="cadastro">
+        <form method="post" id="form" action="">
+            <h1>Cadastro Produto</h1>
+
+            <p>
+                <label for="prddsc">Descrição</label>
+                <input id="prddsc" name="prddsc" required="required" type="text" placeholder="nome" />
+            </p>
+
+            <p>
+                <label for="prdqtd">Quantidade</label>
+                <input id="prdqtd" name="prdqtd" required="required" type="number" placeholder="9999999" />
+            </p>
+            <p>
+                <label for="prdval">Valor</label>
+                <input id="prdval" name="prdval" required="required" type="number" placeholder="999999" />
+            </p>
+
+            <p>
+                <input type="submit" value="Cadastrar" />
+            </p>
+            <!-- 
+            <p class="link">
+                Já tem conta?
+                <a href="#paralogin"> Ir para Login </a>
+            </p> 
+        -->
+        </form>
+    </div>
+
+
+    <script>
+
+        const form = document.querySelector('#form');
+        const prddsc = document.querySelector('#prddsc');
+        const prdqtd = document.querySelector('#prdqtd');
+        const prdval = document.querySelector('#prdval');
+        const sArqNom = './assets/basedados/bd_produtos.json'
+
+        form.addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            let aRet = ""
+            let nRet1 = 0
+            let nCont = 0
+            let sVar1 = prddsc.value
+            let sVar2 = prdqtd.value
+            let sVar3 = prdval.value
+
+            // ABERTURA DO ARQUIVO LOCAL
+            fetch(sArqNom).then((response) => {
+                response.json().then((jsonLst) => {
+                    jsonLst.produtos.map((produto) => {
+                        nCont++
+                        /// LOCALIZA O PRODUTO DIGITADO (descrição)
+                        aRet = jsonLst.produtos.find(prod => prod.prddsc === sVar1)
+
+                    })
+                    
+                    nCont++
+                    console.log(nCont)
+                    console.log(aRet)
+
+                    // VERIFICA SE ARRAY RETORNOU PREENCHIDO
+                    if (aRet) {
+                        nRet1 = sVar1.localeCompare(aRet.prddsc)    // VERIFICA SE (DESCRIÇÃO) DIGITADA JÁ ESTÁ CADASTRADA
+                        if (nRet1 == 0) {
+                            alert("1-Produto Já possui cadastro! Verificar.")
+                            window.location.href = "./cadprodutos.html";
+                        } else {
+                            alert("2-Produto Já possui cadastro! Verificar")
+                            window.location.href = "./cadprodutos.html";
+                        }
+                    } else {    // ARRAY VÁZIO, LIBERADO PARA CADASTRAR (MONTAGEM DO JSON)
+                        sNewC = `{"prdidd": "${nCont}","prddsc": "${sVar1}","prdqtd": "${sVar2}","prdval": "${sVar3}"}`
+                        console.log(sNewC)
+                        alert("3-Novo Produto. Gravando Produto!")
+                        window.location.href = "./cadprodutos.html";
+                    }
+
+                })
+            })
+        })
+
+    </script>
+
+</body>
+
+</html>
+
+
+<!-- 
+{
+    "produtos": [
+        {
+            "prdidd": "000001",
+            "prddsc": "PRODUTO 00001",
+            "prdqtd": "1000",
+            "prdval": "50,00"
+        },
+        {
+            "prdidd": "000002",
+            "prddsc": "PRODUTO 00002",
+            "prdqtd": "200",
+            "prdval": "10,00"
+        },
+        {
+            "prdidd": "000003",
+            "prddsc": "PRODUTO 00003",
+            "prdqtd": "3000",
+            "prdval": "30,00"
+        },
+        {
+            "prdidd": "000004",
+            "prddsc": "PRODUTO 00004",
+            "prdqtd": "40",
+            "prdval": "1,00"
+        }
+    ]
+}
+ -->

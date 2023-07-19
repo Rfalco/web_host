@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    div {
+        min-width: 300px;
+        width: 50%;
+        margin: 10px auto;
+    }
+
+    input,
+    textarea {
+        width: 100%;
+        min-width: 250px;
+    }
+</style>
+
+<body>
+
+    <h3>Salvar arquivo com JavaScript</h3>
+    <div>
+        <label for="input-fileName">Nome do Arquivo</label><br />
+        <input type="text" id="titulo" placeholder="Nome do Arquivo">
+    </div>
+    <div>
+        <label for="textarea">Texto</label><br />
+        <textarea id="texto" placeholder="Digite um texto para salva-lo"></textarea>
+    </div>
+    <div>
+        <button onclick="salvar()">Salvar</button>
+    </div>
+
+
+    <!-- Biblioteca que adicionara o código -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js"
+        integrity="sha512-csNcFYJniKjJxRWRV1R7fvnXrycHP6qDR21mgz1ZP55xY5d+aHLfo9/FcGDQLfn2IfngbAHd8LdfsagcCqgTcQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- função ao clicar em salvar -->
+    <script>
+        function salvar() {
+            let texto = document.getElementById("texto").value;
+            let titulo = document.getElementById("titulo").value;
+            let blob = new Blob([texto], { type: "text/plain;charset=utf-8" });
+            saveAs(blob, titulo + ".txt");
+        }
+    </script>
+
+
+</body>
+
+</html>

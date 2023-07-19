@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="./assets/x_images/pequeno/icon_cb_amr_16x16.png" type="image/x-icon">
+
+    <title>Cadastro Cliente</title>
+</head>
+
+
+
+<body>
+    <div id="cadastro">
+        <form method="post" id="form">
+            <h1>Cadastro Cliente</h1>
+
+            <p>
+                <label for="clinam">Cliente</label>
+                <input id="clinam" name="clinam" required="required" type="text" placeholder="Nome Cliente" />
+            </p>
+
+            <p>
+                <label for="cliema">E-mail</label>
+                <input id="cliema" name="cliema" required="required" type="email" placeholder="contato@dominio.com" />
+            </p>
+            <p>
+                <label for="cliest">Estado</label>
+                <input id="cliest" name="cliest" required="required" type="text" placeholder="SP / MG / RJ" />
+            </p>
+            <p>
+                <label for="cliend">Endereço</label>
+                <input id="cliend" name="cliend" required="required" type="text" placeholder="Av./Rua 25 Março, 9999" />
+            </p>
+
+            <p>
+                <input type="submit" value="Cadastrar" />
+            </p>
+            <!-- 
+            <p class="link">
+                Já tem conta?
+                <a href="#paralogin"> Ir para Login </a>
+            </p> 
+        -->
+        </form>
+    </div>
+
+
+    <script>
+
+        const form = document.querySelector('#form');
+        const clinam = document.querySelector('#clinam');
+        const cliema = document.querySelector('#cliema');
+        const cliest = document.querySelector('#cliest');
+        const cliend = document.querySelector('#cliend');
+        const sArqNom = './assets/basedados/bd_clientes.json'
+
+        form.addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            let aRet = ""
+            let nRet1 = 0
+            let nCont = 0
+            let sNewC = ""
+            let sVar1 = clinam.value
+            let sVar2 = cliema.value
+            let sVar3 = cliest.value
+            let sVar4 = cliend.value
+
+            // ABERTURA DO ARQUIVO LOCAL
+            fetch(sArqNom).then((response) => {
+                response.json().then((jsonLst) => {
+                    jsonLst.clientes.map((cliente) => {
+                        nCont++
+                        // LOCALIZA O CLIENTE DIGITADO
+                        aRet = jsonLst.clientes.find(clie => clie.cliema === sVar2)
+
+                    })
+
+                    nCont++
+                    console.log(nCont)
+                    console.log(aRet)
+
+                    // VERIFICA SE ARRAY RETORNOU PREENCHIDO
+                    if (aRet) {
+                        nRet1 = sVar1.localeCompare(aRet.clinam)    // VERIFICA SE (NOME) DIGITADO JÁ ESTÁ CADASTRADO
+                        if (nRet1 == 0) {
+                            alert("1-Cliente Já possui cadastro! Verificar.")
+                            window.location.href = "./cadclientes.html";
+                        } else {
+                            alert("2-Este E-mail já possui cadastro! Verificar.")
+                            window.location.href = "./cadclientes.html";
+                        }
+                    } else {    // ARRAY VÁZIO, LIBERADO PARA CADASTRAR (MONTAGEM DO JSON)
+                        sNewC = `{"cliidd": "${nCont}","clinam": "${sVar1}","cliema": "${sVar2}","cliend": "${sVar4}","cliest": "${sVar3}"}`
+                        console.log(sNewC)
+                        alert("3-Novo Cliente. Gravando Cliente!")
+                        window.location.href = "./cadclientes.html";
+                    }
+
+                })
+            })
+        })
+
+    </script>
+
+</body>
+
+</html>
+
+
+<!-- 
+{
+    "clientes": [
+        {
+            "cliidd": "000001",
+            "clinam": "RAFAEL FALCO",
+            "cliema": "rfalcox@gmail.com",
+            "cliend": "Rua Primitiva Vianco, 446",
+            "cliest": "SP"
+        },
+        {
+            "cliidd": "000002",
+            "clinam": "LUIS HENRIQUE FALCO",
+            "cliema": "lfalcox@gmail.com",
+            "cliend": "Rua Antonio Agú, 556",
+            "cliest": "SP"
+        },
+        {
+            "cliidd": "000003",
+            "clinam": "YASMIN FALCO",
+            "cliema": "yfalcox@gmail.com",
+            "cliend": "Avenida dos Autonomistas, 885",
+            "cliest": "SP"
+        },
+        {
+            "cliidd": "000004",
+            "clinam": "ZORAMI FALCO",
+            "cliema": "zfalcox@gmail.com",
+            "cliend": "Avenida Santo Antonio, 987",
+            "cliest": "SP"
+        }
+    ]
+}
+ -->

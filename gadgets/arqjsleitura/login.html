@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="../../assets/x_images/encode/icon_cb_amr_32x32.png" type="image/x-icon">
+
+    <title>Login</title>
+
+    <style>
+        .btnNewUsu {
+            padding: 5px;
+            background-color: #00ffff;
+            border: 2px solid #ffee00;
+            text-decoration: none;
+        }
+
+        div {
+            margin-bottom: 20px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <section>
+        <div class="btnNew">
+            <a href="cadanewusu.html" class="btnNewUsu" target="_self">Novo Usuário</a>
+        </div>
+
+        <div class="form">
+            <form method="post" id="form">
+                <label for="">Login</label>
+                <input type="text" class="login" id="login" name="login" placeholder="contato@dominio.com"
+                    required><br><br>
+                <label for="">Senha</label>
+                <input type="password" class="senha" id="senha" name="senha" placeholder="senha" required><br><br>
+                <input type="submit" value="Enviar">
+            </form>
+        </div>
+
+    </section>
+
+    <script>
+
+        const form = document.querySelector('#form');
+        const login = document.querySelector('.login');
+        const passw = document.querySelector('.senha');
+        const sArqNom = 'bd_usuario.json'
+
+        form.addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            let nRet1 = 0
+            let sVar1 = login.value
+            let sVar2 = passw.value
+            let aRet = ""
+
+            //! ABERTURA DO ARQUIVO LOCAL
+            fetch("bd_usuarios.json").then((response) => {
+                response.json().then((jsonLst) => {
+                    jsonLst.usuarios.map((usuario) => {
+
+                        /// LOCALIZA O USUÁRIO DIGITADO
+                        aRet = jsonLst.usuarios.find(usus => usus.usuema === sVar1)
+
+                    })
+
+                    console.log(aRet)
+
+                    /// V
+                    if (aRet) {
+                        nRet1 = sVar2.localeCompare(aRet.ususen)
+                        if (nRet1 == 0) {
+                            alert("1-Usuário Válido! Seja bem vindo.")
+                            window.location.href = "./read_arq.html";
+                        } else {
+                            alert("2-Senha inválida. Tente novamente!")
+                            window.location.href = "./login.html";
+                        }
+                    } else {
+                        alert("3-Usuário não localizado. Verifique!")
+                        window.location.href = "./login.html";
+                    }
+
+                })
+            })
+        })
+
+    </script>
+
+</body>
+
+</html>
+
+<!-- 
+{usuidd: '000001', usunam: 'RAFAEL FALCO', usuema: 'rfalcox@gmail.com', ususen: 'q1W@zaXS', dtanas: '19730817'}
+{usuidd: '000002', usunam: 'LUIS HENRIQUE FALCO', usuema: 'lfalcox@gmail.com', ususen: 'XXas#@56', dtanas: '20070414'}
+{usuidd: '000003', usunam: 'YASMIN FALCO', usuema: 'yfalcox@gmail.com', ususen: '23@!qwXZ', dtanas: '20070414'}
+{usuidd: '000004', usunam: 'ZORAMI FALCO', usuema: 'zfalcox@gmail.com', ususen: 'AZsx@!21', dtanas: '19730207'}
+ -->

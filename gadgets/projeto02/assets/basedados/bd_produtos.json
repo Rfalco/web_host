@@ -1,0 +1,28 @@
+{
+    "produtos": [
+        {
+            "prdidd": "000001",
+            "prddsc": "PRODUTO 00001",
+            "prdqtd": "1000",
+            "prdval": "50,00"
+        },
+        {
+            "prdidd": "000002",
+            "prddsc": "PRODUTO 00002",
+            "prdqtd": "200",
+            "prdval": "10,00"
+        },
+        {
+            "prdidd": "000003",
+            "prddsc": "PRODUTO 00003",
+            "prdqtd": "3000",
+            "prdval": "30,00"
+        },
+        {
+            "prdidd": "000004",
+            "prddsc": "PRODUTO 00004",
+            "prdqtd": "40",
+            "prdval": "1,00"
+        }
+    ]
+}

@@ -1,0 +1,32 @@
+{
+    "usuarios": [
+        {
+            "usuidd": "000001",
+            "usunam": "RAFAEL FALCO",
+            "usuema": "rfalcox@gmail.com",
+            "ususen": "q1W@zaXS",
+            "dtanas": "19730817"
+        },
+        {
+            "usuidd": "000002",
+            "usunam": "LUIS HENRIQUE FALCO",
+            "usuema": "lfalcox@gmail.com",
+            "ususen": "XXas#@56",
+            "dtanas": "20070414"
+        },
+        {
+            "usuidd": "000003",
+            "usunam": "YASMIN FALCO",
+            "usuema": "yfalcox@gmail.com",
+            "ususen": "23@!qwXZ",
+            "dtanas": "20070414"
+        },
+        {
+            "usuidd": "000004",
+            "usunam": "ZORAMI FALCO",
+            "usuema": "zfalcox@gmail.com",
+            "ususen": "AZsx@!21",
+            "dtanas": "19730207"
+        }
+    ]
+}

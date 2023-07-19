@@ -1,32 +1,7 @@
-
-// https://www.youtube.com/watch?v=SWTJxnms_YA&ab_channel=DouglasHorstmann
-// https://www.youtube.com/watch?v=3t-jZ2V_Kt4&ab_channel=MaykBrito
-
-
 const input = document.querySelector('#arquivo');
 const preview = document.querySelector('#preview');
 const btnDown = document.querySelector('#download');
 
-input.addEventListener('change', function () {
-    const arquivo = this.files[0];
-    const leitor = new FileReader();
-
-    if (arquivo) {
-        leitor.readAsText(arquivo);
-        leitor.addEventListener('load', function () {
-            // console.log(leitor.result);
-            preview.value = leitor.result;
-        })
-    }
-
-
-})
-
-
-
-
-
-/*
 input.addEventListener('change', function () {
     const arquivo = this.files[0];
     const leitor = new FileReader();
@@ -62,7 +37,11 @@ const download = function () {
 }
 
 btnDown.addEventListener('click', function () {
-    download()(preview.value, 'arq_usu.json');
+    download()(preview.value, 'newarq_00.json');
 })
 
-*/
+
+
+
+
+

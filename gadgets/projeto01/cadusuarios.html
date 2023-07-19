@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="./assets/x_images/pequeno/icon_cb_amr_16x16.png" type="image/x-icon">
+
+    <title>Cadastro Usuários</title>
+</head>
+
+<body>
+    <div id="cadastro">
+        <form method="post" id="form" action="">
+            <h1>Cadastro Novo Usuário</h1>
+
+            <p>
+                <label for="nomusu">Seu nome</label>
+                <input id="nomusu" name="nomusu" required="required" type="text" placeholder="JOSÉ DA SILVA" />
+            </p>
+
+            <p>
+                <label for="dtanas">Data de Nascimento</label>
+                <input id="dtanas" name="dtanas" required="required" type="text" placeholder="dd/mm/aaaa" />
+            </p>
+            <p>
+                <label for="emausu">Seu e-mail</label>
+                <input id="emausu" name="emausu" required="required" type="email"
+                    placeholder="contato@htmlecsspro.com" />
+            </p>
+
+            <p>
+                <label for="senusu">Sua senha</label>
+                <input id="senusu" name="senusu" required="required" type="password" placeholder="ex. 1234" />
+            </p>
+
+            <p>
+                <input type="submit" value="Cadastrar" />
+            </p>
+            <!-- 
+            <p class="link">
+                Já tem conta?
+                <a href="#paralogin"> Ir para Login </a>
+            </p> -->
+        </form>
+    </div>
+
+    <script>
+
+        const form = document.querySelector('#form');
+        const nomusu = document.querySelector('#nomusu');
+        const dtanas = document.querySelector('#dtanas');
+        const emausu = document.querySelector('#emausu');
+        const senusu = document.querySelector('#senusu');
+        const sArqNom = './assets/basedados/bd_usuarios.json'
+
+        form.addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            let aRet = ""
+            let nRet1 = 0
+            let nCont = 0
+            let sNewC = ""
+            let sVar1 = emausu.value
+            let sVar2 = senusu.value
+            let sVar3 = nomusu.value
+            let sVar4 = dtanas.value
+
+            //! ABERTURA DO ARQUIVO LOCAL
+            fetch(sArqNom).then((response) => {
+                response.json().then((jsonLst) => {
+                    jsonLst.usuarios.map((usuario) => {
+                        nCont++
+                        /// LOCALIZA O USUÁRIO DIGITADO (email)
+                        aRet = jsonLst.usuarios.find(usus => usus.usuema === sVar1)
+
+                    })
+
+                    nCont++
+                    console.log(nCont)
+                    console.log(aRet)
+
+                    // VERIFICA SE ARRAY RETORNOU PREENCHIDO
+                    if (aRet) {
+                        nRet1 = sVar3.localeCompare(aRet.usunam)    // VERIFICA SE (NOME) DIGITADO JÁ ESTÁ CADASTRADO
+                        if (nRet1 == 0) {
+                            alert("1-Nome e E-mail já possui cadastro! Verificar.")
+                            window.location.href = "./cadusuarios.html";
+                        } else {
+                            alert("2-Este E-mail já possui cadastro! Verificar.")
+                            window.location.href = "./cadusuarios.html";
+                        }
+                    } else {    // ARRAY VÁZIO, LIBERADO PARA CADASTRAR (MONTAGEM DO JSON)
+
+                        sNewC = `{"usuidd": "${nCont}", "usunam": "${sVar3}", "usuema": "${sVar1}", "ususen": "${sVar2}", "dtanas": "${sVar4}"}`
+                        console.log(sNewC)
+                        alert("3-Novo Usuário. Gravando Usuário!")
+                        window.location.href = "./cadusuarios.html";
+                    }
+
+
+                })
+            })
+        })
+
+    </script>
+
+</body>
+
+</html>
+
+<!-- 
+{usuidd: '000001', usunam: 'RAFAEL FALCO', usuema: 'rfalcox@gmail.com', ususen: 'q1W@zaXS', dtanas: '19730817'}
+{usuidd: '000002', usunam: 'LUIS HENRIQUE FALCO', usuema: 'lfalcox@gmail.com', ususen: 'XXas#@56', dtanas: '20070414'}
+{usuidd: '000003', usunam: 'YASMIN FALCO', usuema: 'yfalcox@gmail.com', ususen: '23@!qwXZ', dtanas: '20070414'}
+{usuidd: '000004', usunam: 'ZORAMI FALCO', usuema: 'zfalcox@gmail.com', ususen: 'AZsx@!21', dtanas: '19730207'}
+ -->

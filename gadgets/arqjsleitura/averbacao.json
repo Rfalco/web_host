@@ -1,0 +1,98 @@
+[
+    {
+        "Averbado": {
+            "Protocolo": "TESTE",
+            "DadosSeguro": [
+                {
+                    "ValorAverbado": "999.88",
+                    "CNPJSeguradora": "01083012000190",
+                    "NumApolice": "TESTE",
+                    "TpMov": "1",
+                    "RamoAverbado": "54",
+                    "NomeSeguradora": "HOMOLOGACAO WS",
+                    "TpDDR": "",
+                    "NumeroAverbacao": "0000012233267874900018999001000066482106"
+                }
+            ],
+            "dhAverbacao": "2023-04-05T19:01:37"
+        },
+        "TpDoc": "6",
+        "InfAdic": null,
+        "Serie": "1",
+        "CNPJCli": "32678749000189",
+        "Filial": "",
+        "Numero": 66482
+    },
+    {
+        "Averbado": {
+            "Protocolo": "TESTE",
+            "DadosSeguro": [
+                {
+                    "ValorAverbado": "999.88",
+                    "CNPJSeguradora": "01083012000190",
+                    "NumApolice": "TESTE",
+                    "TpMov": "1",
+                    "RamoAverbado": "54",
+                    "NomeSeguradora": "HOMOLOGACAO WS",
+                    "TpDDR": "",
+                    "NumeroAverbacao": "0000012233267874900018999001000066483186"
+                }
+            ],
+            "dhAverbacao": "2023-04-05T19:01:43"
+        },
+        "TpDoc": "6",
+        "InfAdic": null,
+        "Serie": "1",
+        "CNPJCli": "32678749000189",
+        "Filial": "",
+        "Numero": 66483
+    },
+    {
+        "Averbado": {
+            "Protocolo": "TESTE",
+            "DadosSeguro": [
+                {
+                    "ValorAverbado": "999.88",
+                    "CNPJSeguradora": "01083012000190",
+                    "NumApolice": "TESTE",
+                    "TpMov": "1",
+                    "RamoAverbado": "54",
+                    "NomeSeguradora": "HOMOLOGACAO WS",
+                    "TpDDR": "",
+                    "NumeroAverbacao": "0000012233267874900018999001000066485144"
+                }
+            ],
+            "dhAverbacao": "2023-04-05T19:01:55"
+        },
+        "TpDoc": "6",
+        "InfAdic": null,
+        "Serie": "1",
+        "CNPJCli": "32678749000189",
+        "Filial": "",
+        "Numero": 66485
+    },
+    {
+        "Averbado": {
+            "Protocolo": "TESTE",
+            "DadosSeguro": [
+                {
+                    "ValorAverbado": "999.88",
+                    "CNPJSeguradora": "01083012000190",
+                    "NumApolice": "TESTE",
+                    "TpMov": "1",
+                    "RamoAverbado": "54",
+                    "NomeSeguradora": "HOMOLOGACAO WS",
+                    "TpDDR": "",
+                    "NumeroAverbacao": "0000012233267874900018999001000066486123"
+                }
+            ],
+            "dhAverbacao": "2023-04-05T19:02:01"
+        },
+        "TpDoc": "6",
+        "InfAdic": null,
+        "Serie": "1",
+        "CNPJCli": "32678749000189",
+        "Filial": "",
+        "Numero": 66486
+    }
+]

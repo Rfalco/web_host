@@ -1,0 +1,185 @@
+/*===============================<<<< SETTINGS >>>>==================================*/
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+    /* ------------------- CORES E FUNDOS SITE --------------------------- */
+    --corb: #000000;
+    --corw: #ffffff;
+    --corf: #f3f3f3;
+    --txt0: rgba(15, 24, 75, 0.5);
+
+    /*==== TEMPLATE ESCURO [cor0 e cor1 (escuro) / cor2 (escuro) / cor3 e cor4 (claro)] ====*/
+    --imgTop: url("../x_images/pequeno/logo_encode_1.png");
+    --txt1: rgba(133, 223, 233, 0.945);
+    --txt2: rgba(235, 164, 164, 0.959);
+    --box5: rgba(100, 100, 100, 0.205);
+    --cor0: #142b59;
+    --cor1: #1a3073;
+    --cor2: #f2f2f2;
+    --cor3: #f27b35;
+    --cor4: #f2561d;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: bolder;
+    font-family: "Inter", monospace;
+    background-color: var(--corf);
+    color: var(--txt0);
+}
+
+body {
+    width: 100%;
+    max-height: 100vh;
+    border: 3px solid var(--cor3);
+}
+
+header {
+    width: 100%;
+    height: 15vh;
+    border: 3px solid var(--cor3);
+}
+
+main {
+    width: 100%;
+    height: 74vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid var(--cor3);
+}
+
+section {
+    /* margin: 150px; */
+    /* border-radius: 10px; */
+    /* border: 3px solid var(--box5); */
+}
+
+.pagelog {
+    width: 430px;
+    height: 460px;
+}
+
+.pagecad {
+    width: 800px;
+    height: 600px;
+}
+
+footer {
+    border: 3px solid var(--cor3);
+    width: 100%;
+    height: 10vh;
+}
+
+.pagelog {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+.formLogin {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--cor1);
+    border-radius: 7px;
+    padding: 40px;
+    box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.4);
+    gap: 5px
+}
+
+
+.areaLog img {
+    width: 420px;
+}
+
+.formLogin h1 {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    font-weight: 500;
+    font-size: 2.3em;
+    color: var(--cor4);
+    background-color: var(--cor1);
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.formLogin p {
+    display: inline-block;
+    font-size: 14px;
+    color: var(--cor4);
+    background-color: var(--cor1);
+    margin-bottom: 25px;
+}
+
+.formLogin input {
+    padding: 15px;
+    font-size: 14px;
+    margin-bottom: 20px;
+    margin-top: 5px;
+    border-radius: 4px;
+    transition: all linear 160ms;
+    outline: none;
+    color: var(--cor1);
+    background-color: var(--cor2);
+    border: 1px solid var(--cor3);
+}
+
+.formLogin input:focus {
+    border: 1px solid var(--cor4);
+}
+
+.formLogin label {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--cor4);
+    background-color: var(--cor1);
+}
+
+.formLogin a {
+    display: inline-block;
+    margin-bottom: 20px;
+    font-size: 13px;
+    transition: all linear 160ms;
+    color: var(--cor4);
+    background-color: var(--cor1);
+}
+
+.formLogin a:hover {
+    color: var(--cor3);
+}
+
+.btn {
+    color: var(--cor0) !important;
+    background-color: var(--corf) !important;
+    border: 1px solid var(--corb) !important;
+    font-size: 14px;
+    font-weight: 600;
+    border: none !important;
+    transition: all linear 160ms;
+    cursor: pointer;
+    margin: 0 !important;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    color: var(--cor1);
+    background-color: var(--cor3);
+}
+
+div .linklog {
+    background-color: var(--cor1);
+}
+
+div .linklog a {
+    /* margin-left: 40px; */
+    margin-top: 30px;
+}
